@@ -106,6 +106,19 @@
                     <span class="control-label theme-label">Oscuro</span>
                 </button>
 
+                <details class="mobile-native-menu mobile-language-menu">
+                    <summary class="language-control mobile-menu-summary" aria-label="Seleccionar idioma">
+                        <svg class="control-icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><path d="M3 12h18M12 3c2.3 2.5 3.5 5.5 3.5 9S14.3 18.5 12 21c-2.3-2.5-3.5-5.5-3.5-9S9.7 5.5 12 3Z"></path></svg>
+                        <span class="language-label mobile-language-label">Idioma</span>
+                        <span class="language-current mobile-language-current">ES</span>
+                        <svg class="language-chevron" viewBox="0 0 24 24" aria-hidden="true"><path d="m7 10 5 5 5-5"></path></svg>
+                    </summary>
+                    <div class="mobile-native-menu-list">
+                        <button type="button" class="mobile-language-option" data-lang="es">Español</button>
+                        <button type="button" class="mobile-language-option" data-lang="en">English</button>
+                    </div>
+                </details>
+
                 <div class="language-picker">
                     <button
                         type="button"
@@ -1720,6 +1733,29 @@
                     <div class="resume-copy">
                         <p class="resume-title">Currículum profesional</p>
                         <p class="resume-subtitle" id="resume-language-note">Versión en español</p>
+                    </div>
+
+                    <div class="resume-actions mobile-resume-actions">
+                        <details class="mobile-native-menu mobile-resume-menu">
+                            <summary class="resume-button resume-button-secondary mobile-menu-summary">
+                                <span>Visualizar CV</span>
+                                <svg class="resume-chevron" viewBox="0 0 24 24" aria-hidden="true"><path d="m7 10 5 5 5-5"></path></svg>
+                            </summary>
+                            <div class="mobile-native-menu-list">
+                                <a class="mobile-resume-option" href="./cv/CV_Freddy_Ramirez_Rede_QA_ES.pdf" target="_blank" rel="noopener noreferrer">Español</a>
+                                <a class="mobile-resume-option" href="./cv/CV_Freddy_Ramirez_Rede_QA_EN.pdf" target="_blank" rel="noopener noreferrer">English</a>
+                            </div>
+                        </details>
+                        <details class="mobile-native-menu mobile-resume-menu">
+                            <summary class="resume-button resume-button-primary mobile-menu-summary">
+                                <span>Descargar CV</span>
+                                <svg class="resume-chevron" viewBox="0 0 24 24" aria-hidden="true"><path d="m7 10 5 5 5-5"></path></svg>
+                            </summary>
+                            <div class="mobile-native-menu-list">
+                                <a class="mobile-resume-option" href="./cv/CV_Freddy_Ramirez_Rede_QA_ES.pdf" download="CV_Freddy_Ramirez_Rede_QA_ES.pdf">Español</a>
+                                <a class="mobile-resume-option" href="./cv/CV_Freddy_Ramirez_Rede_QA_EN.pdf" download="CV_Freddy_Ramirez_Rede_QA_EN.pdf">English</a>
+                            </div>
+                        </details>
                     </div>
 
                     <div class="resume-actions">

@@ -744,6 +744,18 @@ languageSelect?.addEventListener('change', event => {
   applyLanguage(language)
 })
 
+document.querySelectorAll('.mobile-language-option').forEach(option => {
+  option.addEventListener('click', event => {
+    event.preventDefault()
+    const language = option.dataset.lang === 'en' ? 'en' : 'es'
+    if (languageSelect) languageSelect.value = language
+    localStorage.setItem('portfolio-language', language)
+    applyLanguage(language)
+    option.closest('.mobile-native-menu')?.removeAttribute('open')
+  })
+})
+
+
 themeToggle?.addEventListener('click', () => {
   const dark = document.body.classList.toggle('dark')
   localStorage.setItem('portfolio-theme', dark ? 'dark' : 'light')

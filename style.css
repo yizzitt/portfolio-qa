@@ -3883,3 +3883,99 @@ body.dark #mobile-popover .mobile-popover-option[aria-selected="true"] {
     display: none !important;
   }
 }
+
+/* =====================================================
+   MOBILE NATIVE DETAILS MENUS
+   These controls intentionally use the browser's native
+   <details> disclosure on phones. They do not depend on
+   fixed positioning, portals, or JS to become visible.
+   ===================================================== */
+.mobile-native-menu { display: none; }
+
+@media (max-width: 700px) {
+  .language-picker { display: none !important; }
+  .mobile-native-menu { display: block; position: relative; }
+  .mobile-language-menu { width: auto; }
+  .mobile-menu-summary {
+    list-style: none;
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    gap: 9px;
+    cursor: pointer;
+    user-select: none;
+    -webkit-user-select: none;
+    -webkit-tap-highlight-color: transparent;
+  }
+  .mobile-menu-summary::-webkit-details-marker { display: none; }
+  .mobile-menu-summary .language-chevron,
+  .mobile-menu-summary .resume-chevron { transition: transform .18s ease; }
+  .mobile-native-menu[open] .mobile-menu-summary .language-chevron,
+  .mobile-native-menu[open] .mobile-menu-summary .resume-chevron { transform: rotate(180deg); }
+
+  .mobile-native-menu-list {
+    position: absolute;
+    top: calc(100% + 8px);
+    right: 0;
+    z-index: 99999;
+    width: min(220px, calc(100vw - 24px));
+    padding: 8px;
+    border: 1px solid var(--line);
+    border-radius: 16px;
+    background: var(--surface);
+    box-shadow: 0 18px 42px rgba(16,24,40,.18);
+  }
+
+  .mobile-language-option,
+  .mobile-resume-option {
+    display: flex !important;
+    width: 100%;
+    min-height: 50px;
+    align-items: center;
+    padding: 0 14px;
+    border: 0;
+    border-radius: 11px;
+    background: transparent;
+    color: var(--ink) !important;
+    font: inherit;
+    font-size: .95rem;
+    font-weight: 700;
+    text-decoration: none !important;
+    text-align: left;
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+  }
+  .mobile-language-option:hover,
+  .mobile-language-option:focus-visible,
+  .mobile-resume-option:hover,
+  .mobile-resume-option:focus-visible {
+    background: var(--surface-soft);
+    color: var(--blue) !important;
+    outline: none;
+  }
+
+  .mobile-resume-actions {
+    display: grid !important;
+    grid-template-columns: 1fr;
+    width: 100%;
+    gap: 12px;
+  }
+  .mobile-resume-actions > .mobile-native-menu { width: 100%; }
+  .mobile-resume-actions .mobile-menu-summary { width: 100%; justify-content: space-between; }
+  .mobile-resume-actions .mobile-native-menu-list { left: 0; right: auto; width: 100%; }
+
+  /* Hide the old JS dropdown controls on mobile. Desktop keeps them unchanged. */
+  .resume-actions:not(.mobile-resume-actions) { display: none !important; }
+}
+
+@media (min-width: 701px) {
+  .mobile-resume-actions { display: none !important; }
+}
+
+body.dark .mobile-native-menu-list { box-shadow: 0 18px 42px rgba(0,0,0,.42); }
+body.dark .mobile-language-option,
+body.dark .mobile-resume-option { color: var(--muted-strong) !important; }
+body.dark .mobile-language-option:hover,
+body.dark .mobile-language-option:focus-visible,
+body.dark .mobile-resume-option:hover,
+body.dark .mobile-resume-option:focus-visible { background: #18243a; color: #9abaff !important; }
