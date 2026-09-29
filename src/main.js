@@ -432,6 +432,7 @@ const portalFloatingMenu = menu => {
   floatingMenuState.set(menu, { parent: placeholder.parentNode, placeholder })
   document.body.appendChild(menu)
   menu.classList.add('is-floating')
+  menu.setAttribute('data-mobile-portal', 'true')
 }
 
 const restoreFloatingMenu = menu => {
@@ -443,6 +444,7 @@ const restoreFloatingMenu = menu => {
   }
   floatingMenuState.delete(menu)
   menu.classList.remove('is-floating')
+  menu.removeAttribute('data-mobile-portal')
 }
 
 const closeResumeMenus = () => {
@@ -451,6 +453,13 @@ const closeResumeMenus = () => {
     menu.style.top = ''
     menu.style.left = ''
     menu.style.width = ''
+    menu.style.removeProperty('position')
+    menu.style.removeProperty('display')
+    menu.style.removeProperty('visibility')
+    menu.style.removeProperty('opacity')
+    menu.style.removeProperty('pointer-events')
+    menu.style.removeProperty('transform')
+    menu.style.removeProperty('max-width')
     restoreFloatingMenu(menu)
   })
   document.querySelectorAll('.resume-menu-group').forEach(group => {
@@ -618,9 +627,14 @@ const positionMobileFloatingMenu = (button, menu, width = null) => {
     viewportWidth - viewportPadding * 2
   )
 
-  menu.style.position = 'fixed'
-  menu.style.width = `${menuWidth}px`
-  menu.style.maxWidth = `${viewportWidth - viewportPadding * 2}px`
+  menu.style.setProperty('position', 'fixed', 'important')
+  menu.style.setProperty('display', 'block', 'important')
+  menu.style.setProperty('visibility', 'visible', 'important')
+  menu.style.setProperty('opacity', '1', 'important')
+  menu.style.setProperty('pointer-events', 'auto', 'important')
+  menu.style.setProperty('transform', 'none', 'important')
+  menu.style.setProperty('width', `${menuWidth}px`, 'important')
+  menu.style.setProperty('max-width', `${viewportWidth - viewportPadding * 2}px`, 'important')
 
   let left = rect.right - menuWidth
   left = Math.max(viewportPadding, Math.min(left, viewportWidth - menuWidth - viewportPadding))
@@ -650,6 +664,13 @@ const setLanguageMenuOpen = (open) => {
     languageMenu.style.top = ''
     languageMenu.style.left = ''
     languageMenu.style.width = ''
+    languageMenu.style.removeProperty('position')
+    languageMenu.style.removeProperty('display')
+    languageMenu.style.removeProperty('visibility')
+    languageMenu.style.removeProperty('opacity')
+    languageMenu.style.removeProperty('pointer-events')
+    languageMenu.style.removeProperty('transform')
+    languageMenu.style.removeProperty('max-width')
     restoreFloatingMenu(languageMenu)
   }
 }
