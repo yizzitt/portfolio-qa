@@ -427,6 +427,21 @@ const closeResumeMenus = () => {
   document.querySelectorAll('.resume-menu-group').forEach(group => {
     group.classList.remove('is-open')
     group.querySelector('.resume-button')?.setAttribute('aria-expanded', 'false')
+    const menu = group.querySelector('.resume-menu')
+    if (menu) {
+      menu.style.top = ''
+      menu.style.left = ''
+      menu.style.width = ''
+    }
+  })
+}
+
+const positionOpenResumeMenus = () => {
+  if (window.innerWidth > 700) return
+  document.querySelectorAll('.resume-menu-group.is-open').forEach(group => {
+    const button = group.querySelector('.resume-button')
+    const menu = group.querySelector('.resume-menu')
+    if (button && menu) positionMobileFloatingMenu(button, menu, Math.max(button.getBoundingClientRect().width, 220))
   })
 }
 
@@ -468,6 +483,7 @@ const setupResumeMenus = () => {
       closeResumeMenus()
       group.classList.toggle('is-open', shouldOpen)
       button.setAttribute('aria-expanded', shouldOpen ? 'true' : 'false')
+      if (shouldOpen) requestAnimationFrame(() => positionMobileFloatingMenu(button, group.querySelector('.resume-menu'), Math.max(button.getBoundingClientRect().width, 220)))
     })
     group.querySelectorAll('.resume-menu-option').forEach(option => {
       option.addEventListener('click', closeResumeMenus)
@@ -481,6 +497,15 @@ document.addEventListener('click', event => {
 document.addEventListener('keydown', event => {
   if (event.key === 'Escape') closeResumeMenus()
 })
+
+window.addEventListener('resize', () => {
+  if (languageMenu?.classList.contains('is-open')) positionMobileFloatingMenu(languageButton, languageMenu, 220)
+  positionOpenResumeMenus()
+})
+window.addEventListener('scroll', () => {
+  if (languageMenu?.classList.contains('is-open')) positionMobileFloatingMenu(languageButton, languageMenu, 220)
+  positionOpenResumeMenus()
+}, { passive: true })
 
 setupResumeMenus()
 
@@ -541,10 +566,47 @@ const languageButton = document.getElementById('language-button')
 const languagePicker = document.querySelector('.language-picker')
 const languageMenu = document.getElementById('language-menu')
 
+const positionMobileFloatingMenu = (button, menu, width = null) => {
+  if (!button || !menu || window.innerWidth > 700) {
+    if (menu) {
+      menu.style.top = ''
+      menu.style.left = ''
+      menu.style.width = ''
+    }
+    return
+  }
+
+  const rect = button.getBoundingClientRect()
+  const viewportPadding = 12
+  const menuWidth = Math.min(
+    width || Math.max(rect.width, 190),
+    window.innerWidth - viewportPadding * 2
+  )
+
+  menu.style.width = `${menuWidth}px`
+  let left = rect.right - menuWidth
+  left = Math.max(viewportPadding, Math.min(left, window.innerWidth - menuWidth - viewportPadding))
+
+  let top = rect.bottom + 8
+  const menuHeight = menu.offsetHeight
+  if (top + menuHeight > window.innerHeight - viewportPadding && rect.top - menuHeight - 8 >= viewportPadding) {
+    top = rect.top - menuHeight - 8
+  }
+
+  menu.style.left = `${left}px`
+  menu.style.top = `${top}px`
+}
+
 const setLanguageMenuOpen = (open) => {
   if (!languageButton || !languageMenu) return
   languageButton.setAttribute('aria-expanded', open ? 'true' : 'false')
   languageMenu.classList.toggle('is-open', open)
+  if (open) requestAnimationFrame(() => positionMobileFloatingMenu(languageButton, languageMenu, 220))
+  else {
+    languageMenu.style.top = ''
+    languageMenu.style.left = ''
+    languageMenu.style.width = ''
+  }
 }
 
 languageButton?.addEventListener('click', (event) => {

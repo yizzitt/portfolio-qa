@@ -3486,3 +3486,42 @@ body.dark .nav-brand {
   .nav-brand { width: 36px !important; height: 36px !important; }
   .nav-brand img { width: 28px !important; height: 28px !important; }
 }
+
+/* =====================================================
+   MOBILE DROPDOWN FIX
+   Keep custom menus above cards/nav overflow on phones.
+   The JavaScript positions these menus against their trigger.
+   ===================================================== */
+@media (max-width: 700px) {
+  .language-menu,
+  .resume-menu {
+    position: fixed !important;
+    z-index: 99999 !important;
+    max-width: calc(100vw - 24px) !important;
+    overflow: visible !important;
+  }
+
+  .language-menu {
+    right: auto !important;
+    top: auto !important;
+    left: auto !important;
+  }
+
+  .resume-menu {
+    right: auto !important;
+    bottom: auto !important;
+    top: auto !important;
+    left: auto !important;
+  }
+
+  .language-picker,
+  .resume-menu-group {
+    isolation: isolate;
+  }
+
+  .language-option,
+  .resume-menu-option {
+    position: relative !important;
+    z-index: 1 !important;
+  }
+}
