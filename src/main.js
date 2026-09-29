@@ -423,25 +423,47 @@ const resumeFiles = {
   }
 }
 
+const floatingMenuState = new WeakMap()
+
+const portalFloatingMenu = menu => {
+  if (!menu || menu.parentElement === document.body) return
+  const placeholder = document.createComment(`floating-menu-${menu.id || 'menu'}`)
+  menu.parentNode.insertBefore(placeholder, menu)
+  floatingMenuState.set(menu, { parent: placeholder.parentNode, placeholder })
+  document.body.appendChild(menu)
+  menu.classList.add('is-floating')
+}
+
+const restoreFloatingMenu = menu => {
+  if (!menu || !menu.classList.contains('is-floating')) return
+  const state = floatingMenuState.get(menu)
+  if (state?.placeholder?.parentNode) {
+    state.placeholder.parentNode.insertBefore(menu, state.placeholder.nextSibling)
+    state.placeholder.remove()
+  }
+  floatingMenuState.delete(menu)
+  menu.classList.remove('is-floating')
+}
+
 const closeResumeMenus = () => {
+  document.querySelectorAll('.resume-menu').forEach(menu => {
+    menu.classList.remove('is-open')
+    menu.style.top = ''
+    menu.style.left = ''
+    menu.style.width = ''
+    restoreFloatingMenu(menu)
+  })
   document.querySelectorAll('.resume-menu-group').forEach(group => {
     group.classList.remove('is-open')
     group.querySelector('.resume-button')?.setAttribute('aria-expanded', 'false')
-    const menu = group.querySelector('.resume-menu')
-    if (menu) {
-      menu.style.top = ''
-      menu.style.left = ''
-      menu.style.width = ''
-    }
   })
 }
 
 const positionOpenResumeMenus = () => {
   if (window.innerWidth > 700) return
-  document.querySelectorAll('.resume-menu-group.is-open').forEach(group => {
-    const button = group.querySelector('.resume-button')
-    const menu = group.querySelector('.resume-menu')
-    if (button && menu) positionMobileFloatingMenu(button, menu, Math.max(button.getBoundingClientRect().width, 220))
+  document.querySelectorAll('.resume-menu.is-open').forEach(menu => {
+    const button = document.getElementById(menu.id.replace('-menu', '-button'))
+    if (button) positionMobileFloatingMenu(button, menu, Math.max(button.getBoundingClientRect().width, 220))
   })
 }
 
@@ -476,23 +498,32 @@ const updateResumeLanguage = language => {
 const setupResumeMenus = () => {
   document.querySelectorAll('.resume-menu-group').forEach(group => {
     const button = group.querySelector('.resume-button')
-    if (!button) return
+    const menu = group.querySelector('.resume-menu')
+    if (!button || !menu) return
+
     button.addEventListener('click', event => {
+      event.preventDefault()
       event.stopPropagation()
       const shouldOpen = !group.classList.contains('is-open')
       closeResumeMenus()
-      group.classList.toggle('is-open', shouldOpen)
-      button.setAttribute('aria-expanded', shouldOpen ? 'true' : 'false')
-      if (shouldOpen) requestAnimationFrame(() => positionMobileFloatingMenu(button, group.querySelector('.resume-menu'), Math.max(button.getBoundingClientRect().width, 220)))
+
+      if (!shouldOpen) return
+
+      group.classList.add('is-open')
+      button.setAttribute('aria-expanded', 'true')
+      if (window.innerWidth <= 700) portalFloatingMenu(menu)
+      menu.classList.add('is-open')
+      requestAnimationFrame(() => positionMobileFloatingMenu(button, menu, Math.max(button.getBoundingClientRect().width, 220)))
     })
-    group.querySelectorAll('.resume-menu-option').forEach(option => {
+
+    menu.querySelectorAll('.resume-menu-option').forEach(option => {
       option.addEventListener('click', closeResumeMenus)
     })
   })
 }
 
 document.addEventListener('click', event => {
-  if (!event.target.closest('.resume-menu-group')) closeResumeMenus()
+  if (!event.target.closest('.resume-menu-group') && !event.target.closest('.resume-menu')) closeResumeMenus()
 })
 document.addEventListener('keydown', event => {
   if (event.key === 'Escape') closeResumeMenus()
@@ -607,23 +638,32 @@ const positionMobileFloatingMenu = (button, menu, width = null) => {
 
 const setLanguageMenuOpen = (open) => {
   if (!languageButton || !languageMenu) return
+
   languageButton.setAttribute('aria-expanded', open ? 'true' : 'false')
-  languageMenu.classList.toggle('is-open', open)
-  if (open) requestAnimationFrame(() => positionMobileFloatingMenu(languageButton, languageMenu, 220))
-  else {
+
+  if (open) {
+    if (window.innerWidth <= 700) portalFloatingMenu(languageMenu)
+    languageMenu.classList.add('is-open')
+    requestAnimationFrame(() => positionMobileFloatingMenu(languageButton, languageMenu, 220))
+  } else {
+    languageMenu.classList.remove('is-open')
     languageMenu.style.top = ''
     languageMenu.style.left = ''
     languageMenu.style.width = ''
+    restoreFloatingMenu(languageMenu)
   }
 }
 
 languageButton?.addEventListener('click', (event) => {
+  event.preventDefault()
   event.stopPropagation()
   setLanguageMenuOpen(!languageMenu?.classList.contains('is-open'))
 })
 
 languageMenu?.querySelectorAll('.language-option').forEach(option => {
-  option.addEventListener('click', () => {
+  option.addEventListener('click', event => {
+    event.preventDefault()
+    event.stopPropagation()
     const language = option.dataset.lang === 'en' ? 'en' : 'es'
     if (languageSelect) languageSelect.value = language
     localStorage.setItem('portfolio-language', language)
@@ -633,11 +673,14 @@ languageMenu?.querySelectorAll('.language-option').forEach(option => {
 })
 
 document.addEventListener('click', (event) => {
-  if (!languagePicker?.contains(event.target)) setLanguageMenuOpen(false)
+  if (!languagePicker?.contains(event.target) && !languageMenu?.contains(event.target)) setLanguageMenuOpen(false)
 })
 
 document.addEventListener('keydown', (event) => {
-  if (event.key === 'Escape') setLanguageMenuOpen(false)
+  if (event.key === 'Escape') {
+    setLanguageMenuOpen(false)
+    closeResumeMenus()
+  }
 })
 
 /* =====================================================

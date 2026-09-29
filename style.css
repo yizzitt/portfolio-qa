@@ -3766,3 +3766,37 @@ body.dark .nav-brand {
     display: block !important;
   }
 }
+
+/* =====================================================
+   MOBILE DROPDOWN PORTAL: FINAL iOS SAFARI FIX
+   The navigation uses backdrop-filter, which can create a
+   containing block for fixed descendants in Safari. The JS
+   temporarily moves open mobile menus to <body>, so they
+   must have their own open-state styles here.
+   ===================================================== */
+@media (max-width: 700px) {
+  .language-menu.is-floating.is-open,
+  .resume-menu.is-floating.is-open {
+    position: fixed !important;
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    pointer-events: auto !important;
+    transform: translateY(0) scale(1) !important;
+    z-index: 2147483000 !important;
+    margin: 0 !important;
+    box-sizing: border-box !important;
+  }
+
+  .language-menu.is-floating {
+    width: 220px !important;
+    right: auto !important;
+    bottom: auto !important;
+  }
+
+  .resume-menu.is-floating {
+    width: 220px !important;
+    right: auto !important;
+    bottom: auto !important;
+  }
+}
