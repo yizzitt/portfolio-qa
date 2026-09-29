@@ -577,24 +577,32 @@ const positionMobileFloatingMenu = (button, menu, width = null) => {
   }
 
   const rect = button.getBoundingClientRect()
+  const viewport = window.visualViewport
+  const viewportWidth = viewport?.width || window.innerWidth
+  const viewportHeight = viewport?.height || window.innerHeight
+  const viewportOffsetTop = viewport?.offsetTop || 0
   const viewportPadding = 12
   const menuWidth = Math.min(
     width || Math.max(rect.width, 190),
-    window.innerWidth - viewportPadding * 2
+    viewportWidth - viewportPadding * 2
   )
 
+  menu.style.position = 'fixed'
   menu.style.width = `${menuWidth}px`
+  menu.style.maxWidth = `${viewportWidth - viewportPadding * 2}px`
+
   let left = rect.right - menuWidth
-  left = Math.max(viewportPadding, Math.min(left, window.innerWidth - menuWidth - viewportPadding))
+  left = Math.max(viewportPadding, Math.min(left, viewportWidth - menuWidth - viewportPadding))
 
   let top = rect.bottom + 8
   const menuHeight = menu.offsetHeight
-  if (top + menuHeight > window.innerHeight - viewportPadding && rect.top - menuHeight - 8 >= viewportPadding) {
+  const lowerLimit = viewportOffsetTop + viewportHeight - viewportPadding
+  if (top + menuHeight > lowerLimit && rect.top - menuHeight - 8 >= viewportOffsetTop + viewportPadding) {
     top = rect.top - menuHeight - 8
   }
 
-  menu.style.left = `${left}px`
-  menu.style.top = `${top}px`
+  menu.style.left = `${Math.round(left)}px`
+  menu.style.top = `${Math.round(top)}px`
 }
 
 const setLanguageMenuOpen = (open) => {

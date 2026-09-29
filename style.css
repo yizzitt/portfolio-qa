@@ -3728,3 +3728,41 @@ body.dark .nav-brand {
     font-size: .98rem !important;
   }
 }
+
+/* =====================================================
+   MOBILE DROPDOWN FIX v23
+   Menus that are opened on small screens must escape the
+   sticky navigation/card stacking context and use viewport
+   coordinates calculated by main.js.
+   ===================================================== */
+@media (max-width: 700px) {
+  .language-menu,
+  .resume-menu {
+    position: fixed !important;
+    z-index: 99999 !important;
+    max-height: min(260px, calc(100vh - 24px)) !important;
+    overflow-y: auto !important;
+    overscroll-behavior: contain !important;
+    -webkit-overflow-scrolling: touch !important;
+  }
+
+  .language-menu {
+    top: auto;
+    right: auto;
+    bottom: auto;
+    margin: 0 !important;
+  }
+
+  .resume-menu {
+    top: auto;
+    right: auto;
+    bottom: auto;
+    left: auto;
+    margin: 0 !important;
+  }
+
+  .language-menu.is-open,
+  .resume-menu-group.is-open .resume-menu {
+    display: block !important;
+  }
+}
