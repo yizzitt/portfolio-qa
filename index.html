@@ -11,18 +11,131 @@
 
     <meta
         name="description"
+        id="meta-description"
         content="Portafolio de Freddy Ramírez Rede, QA Tester Junior especializado en pruebas manuales, funcionales, API Testing y SQL."
     >
 
-    <title>
+    <title id="page-title">
         Freddy Ramírez Rede | QA Tester
     </title>
+    <meta name="theme-color" content="#091426">
+
+    <link rel="icon" type="image/svg+xml" href="./favicon-fr.svg?v=2">
+    <link rel="icon" type="image/png" sizes="32x32" href="./favicon-fr-32.png?v=2">
+    <link rel="icon" type="image/png" sizes="16x16" href="./favicon-fr-16.png?v=2">
+    <link rel="shortcut icon" href="./favicon-fr.ico?v=2">
+    <link rel="apple-touch-icon" sizes="180x180" href="./favicon-fr-180.png?v=2">
+
 </head>
 
 
 <body class="bg-slate-50 text-slate-800">
 
+    
     <!-- =====================================================
+         STICKY NAVIGATION
+         ===================================================== -->
+
+<nav
+        class="sticky top-0 z-50 border-b border-slate-200 bg-white/95 backdrop-blur"
+    >
+
+        <div
+            class="nav-inner mx-auto flex max-w-6xl flex-wrap justify-center gap-x-6 gap-y-2 px-6 py-3 text-xs font-semibold text-slate-500 sm:text-sm"
+        >
+
+            <a class="nav-brand" href="#" aria-label="Volver al inicio">
+                <img src="./fr-logo.png" alt="FR" width="38" height="38">
+            </a>
+
+            <div class="nav-links">
+            <a
+                href="#sobre-mi"
+                class="transition hover:text-blue-600"
+            >
+                Sobre mí
+            </a>
+
+            <a
+                href="#habilidades"
+                class="transition hover:text-blue-600"
+            >
+                Habilidades
+            </a>
+
+            <a
+                href="#proyectos"
+                class="transition hover:text-blue-600"
+            >
+                Proyectos
+            </a>
+
+            <a
+                href="#experiencia"
+                class="transition hover:text-blue-600"
+            >
+                Experiencia
+            </a>
+
+            <a
+                href="#educacion"
+                class="transition hover:text-blue-600"
+            >
+                Educación
+            </a>
+
+            <a
+                href="#curriculum"
+                class="transition hover:text-blue-600"
+            >
+                Currículum
+            </a>
+
+            <a
+                href="#contacto"
+                class="transition hover:text-blue-600"
+            >
+                Contacto
+            </a>
+            </div>
+
+            <div class="site-controls" aria-label="Preferencias del sitio">
+                <button type="button" id="theme-toggle" class="site-control" aria-label="Activar modo oscuro" title="Modo oscuro">
+                    <svg class="control-icon icon-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2M12 20v2M4.93 4.93l1.42 1.42M17.65 17.65l1.42 1.42M2 12h2M20 12h2M4.93 19.07l1.42-1.42M17.65 6.35l1.42-1.42"></path></svg>
+                    <svg class="control-icon icon-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12.8A8.5 8.5 0 1 1 11.2 3 6.7 6.7 0 0 0 21 12.8Z"></path></svg>
+                    <span class="control-label theme-label">Oscuro</span>
+                </button>
+
+                <div class="language-picker">
+                    <button
+                        type="button"
+                        id="language-button"
+                        class="language-control"
+                        aria-haspopup="listbox"
+                        aria-expanded="false"
+                        aria-label="Seleccionar idioma"
+                    >
+                        <svg class="control-icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><path d="M3 12h18M12 3c2.3 2.5 3.5 5.5 3.5 9S14.3 18.5 12 21c-2.3-2.5-3.5-5.5-3.5-9S9.7 5.5 12 3Z"></path></svg>
+                        <span class="language-label">Idioma</span>
+                        <span id="language-current" class="language-current">ES</span>
+                        <svg class="language-chevron" viewBox="0 0 24 24" aria-hidden="true"><path d="m7 10 5 5 5-5"></path></svg>
+                    </button>
+                    <div id="language-menu" class="language-menu" role="listbox" aria-label="Seleccionar idioma">
+                        <button type="button" class="language-option" role="option" aria-selected="true" data-lang="es">Español</button>
+                        <button type="button" class="language-option" role="option" aria-selected="false" data-lang="en">English</button>
+                    </div>
+                    <select id="language-select" class="language-native-select" tabindex="-1" aria-hidden="true">
+                        <option value="es">ES</option>
+                        <option value="en">EN</option>
+                    </select>
+                </div>
+            </div>
+
+        </div>
+
+    </nav>
+
+<!-- =====================================================
          HERO
          ===================================================== -->
 
@@ -80,15 +193,36 @@
                 </p>
 
 
-                <div class="mt-7 flex flex-wrap gap-3">
+                <div class="qa-terminal" aria-label="Resumen de testing">
+                    <div class="qa-terminal-top">
+                        <span class="qa-dot"></span><span class="qa-dot"></span><span class="qa-dot"></span>
+                        <span class="qa-terminal-title">qa@freddy:~</span>
+                    </div>
+                    <div class="qa-terminal-body">
+                        <span class="qa-prompt">$</span> run <span class="qa-command">portfolio-tests</span>
+                        <span class="qa-line"><b>✓</b> Functional testing <i>PASS</i></span>
+                        <span class="qa-line"><b>✓</b> API testing <i>PASS</i></span>
+                        <span class="qa-line"><b>✓</b> SQL validation <i>PASS</i></span>
+                        <span class="qa-line"><b>✓</b> Bug reporting <i>READY</i></span>
+                    </div>
+                </div>
+
+
+            </div>
+
+
+                <div class="hero-socials mt-7 flex flex-wrap gap-3">
 
                     <a
                         href="https://www.linkedin.com/in/freddy-ram%C3%ADrez-rede-8b4778283"
                         target="_blank"
                         rel="noopener noreferrer"
-                        class="rounded-lg bg-gradient-to-r from-blue-500 to-indigo-500 px-5 py-2.5 text-sm font-bold text-white shadow-lg shadow-blue-900/30 transition hover:-translate-y-0.5 hover:shadow-xl"
+                        data-icon="linkedin" class="hero-social-link itshover-social rounded-lg bg-gradient-to-r from-blue-500 to-indigo-500 px-5 py-2.5 text-sm font-bold text-white shadow-lg shadow-blue-900/30 transition hover:-translate-y-0.5 hover:shadow-xl"
                     >
-                        LinkedIn
+                        <svg class="social-icon itshover-icon" viewBox="0 0 24 24" aria-hidden="true">
+                            <path fill="currentColor" d="M20.45 20.45h-3.56v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.34V8.99h3.42v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.61 0 4.27 2.37 4.27 5.46v6.29ZM5.32 7.43a2.07 2.07 0 1 1 0-4.14 2.07 2.07 0 0 1 0 4.14ZM3.54 20.45H7.1V8.99H3.54v11.46ZM22.23 0H1.77C.79 0 0 .77 0 1.72v20.56C0 23.23.79 24 1.77 24h20.46c.98 0 1.77-.77 1.77-1.72V1.72C24 .77 23.21 0 22.23 0Z"/>
+                        </svg>
+                        <span>LinkedIn</span>
                     </a>
 
 
@@ -96,21 +230,24 @@
                         href="https://github.com/yizzitt"
                         target="_blank"
                         rel="noopener noreferrer"
-                        class="rounded-lg border border-white/20 bg-white/10 px-5 py-2.5 text-sm font-bold text-white backdrop-blur transition hover:bg-white/15"
+                        data-icon="github" class="hero-social-link itshover-social rounded-lg border border-white/20 bg-white/10 px-5 py-2.5 text-sm font-bold text-white backdrop-blur transition hover:bg-white/15"
                     >
-                        GitHub
+                        <svg class="social-icon itshover-icon" viewBox="0 0 24 24" aria-hidden="true">
+                            <path fill="currentColor" d="M12 .5A11.5 11.5 0 0 0 8.36 22.9c.58.11.79-.25.79-.56v-2.18c-3.22.7-3.9-1.37-3.9-1.37-.53-1.34-1.29-1.7-1.29-1.7-1.05-.72.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.69 1.26 3.35.96.1-.75.4-1.26.73-1.55-2.57-.29-5.27-1.29-5.27-5.75 0-1.27.45-2.3 1.19-3.11-.12-.29-.52-1.47.11-3.07 0 0 .97-.31 3.17 1.19a10.95 10.95 0 0 1 5.76 0c2.2-1.5 3.17-1.19 3.17-1.19.63 1.6.23 2.78.11 3.07.74.81 1.19 1.84 1.19 3.11 0 4.47-2.71 5.45-5.29 5.74.41.35.78 1.04.78 2.1v3.12c0 .31.21.68.8.56A11.5 11.5 0 0 0 12 .5Z"/>
+                        </svg>
+                        <span>GitHub</span>
                     </a>
 
                 </div>
 
-            </div>
 
-
-            <!-- Hero focus card -->
+                        <!-- Hero focus card -->
 
             <aside
                 class="rounded-2xl border border-white/10 bg-white/10 p-6 shadow-2xl shadow-slate-950/20 backdrop-blur-md"
             >
+
+                <div class="hero-status"><span></span> AVAILABLE FOR QA OPPORTUNITIES</div>
 
                 <p
                     class="mb-4 text-xs font-extrabold tracking-widest text-cyan-200"
@@ -165,63 +302,7 @@
     </header>
 
 
-    <!-- =====================================================
-         NAVIGATION
-         ===================================================== -->
 
-    <nav
-        class="sticky top-0 z-50 border-b border-slate-200 bg-white/95 backdrop-blur"
-    >
-
-        <div
-            class="mx-auto flex max-w-6xl flex-wrap justify-center gap-x-6 gap-y-2 px-6 py-3 text-xs font-semibold text-slate-500 sm:text-sm"
-        >
-
-            <a
-                href="#sobre-mi"
-                class="transition hover:text-blue-600"
-            >
-                Sobre mí
-            </a>
-
-            <a
-                href="#habilidades"
-                class="transition hover:text-blue-600"
-            >
-                Habilidades
-            </a>
-
-            <a
-                href="#proyectos"
-                class="transition hover:text-blue-600"
-            >
-                Proyectos
-            </a>
-
-            <a
-                href="#experiencia"
-                class="transition hover:text-blue-600"
-            >
-                Experiencia
-            </a>
-
-            <a
-                href="#educacion"
-                class="transition hover:text-blue-600"
-            >
-                Educación
-            </a>
-
-            <a
-                href="#contacto"
-                class="transition hover:text-blue-600"
-            >
-                Contacto
-            </a>
-
-        </div>
-
-    </nav>
 
 
     <!-- =====================================================
@@ -586,6 +667,35 @@
                 </div>
 
 
+                <!-- Web / Frontend -->
+
+                <div
+                    class="grid gap-4 py-6 lg:grid-cols-[180px_1fr] lg:gap-8"
+                >
+
+                    <h3 class="font-bold text-fuchsia-700">
+                        Web / Frontend
+                    </h3>
+
+                    <div class="flex flex-wrap gap-2 skill-pills">
+
+                        <span class="rounded-full border border-fuchsia-100 bg-fuchsia-50 px-3 py-1.5 text-xs font-medium text-fuchsia-700">HTML</span>
+                        <span class="rounded-full border border-fuchsia-100 bg-fuchsia-50 px-3 py-1.5 text-xs font-medium text-fuchsia-700">CSS</span>
+                        <span class="rounded-full border border-fuchsia-100 bg-fuchsia-50 px-3 py-1.5 text-xs font-medium text-fuchsia-700">JavaScript</span>
+                        <span class="rounded-full border border-fuchsia-100 bg-fuchsia-50 px-3 py-1.5 text-xs font-medium text-fuchsia-700">Vite</span>
+                        <span class="rounded-full border border-fuchsia-100 bg-fuchsia-50 px-3 py-1.5 text-xs font-medium text-fuchsia-700">Responsive Design</span>
+                        <span class="rounded-full border border-fuchsia-100 bg-fuchsia-50 px-3 py-1.5 text-xs font-medium text-fuchsia-700">Dark / Light Mode</span>
+                        <span class="rounded-full border border-fuchsia-100 bg-fuchsia-50 px-3 py-1.5 text-xs font-medium text-fuchsia-700">ES / EN Localization</span>
+                        <span class="rounded-full border border-fuchsia-100 bg-fuchsia-50 px-3 py-1.5 text-xs font-medium text-fuchsia-700">LocalStorage</span>
+                        <span class="rounded-full border border-fuchsia-100 bg-fuchsia-50 px-3 py-1.5 text-xs font-medium text-fuchsia-700">SVG Animations</span>
+                        <span class="rounded-full border border-fuchsia-100 bg-fuchsia-50 px-3 py-1.5 text-xs font-medium text-fuchsia-700">GitHub Pages</span>
+                        <span class="rounded-full border border-fuchsia-100 bg-fuchsia-50 px-3 py-1.5 text-xs font-medium text-fuchsia-700">GitHub Actions</span>
+
+                    </div>
+
+                </div>
+
+
                 <!-- Tecnologías -->
 
                 <div
@@ -770,7 +880,7 @@
                             rel="noopener noreferrer"
                             class="mt-4 inline-block text-sm font-bold text-blue-600 hover:underline"
                         >
-                            Ver evidencias →
+                            Ver proyecto Urban.Lunch Móvil →
                         </a>
 
                     </div>
@@ -867,7 +977,7 @@
                             rel="noopener noreferrer"
                             class="mt-4 inline-block text-sm font-bold text-violet-600 hover:underline"
                         >
-                            Ver evidencias →
+                            Ver proyecto Urban Routes API REST →
                         </a>
 
                     </div>
@@ -952,7 +1062,7 @@
                             rel="noopener noreferrer"
                             class="mt-4 inline-block text-sm font-bold text-cyan-700 hover:underline"
                         >
-                            Ver evidencias →
+                            Ver proyecto Urban Routes Web →
                         </a>
 
                     </div>
@@ -1037,7 +1147,7 @@
                             rel="noopener noreferrer"
                             class="mt-4 inline-block text-sm font-bold text-emerald-700 hover:underline"
                         >
-                            Ver evidencias →
+                            Ver proyecto Urban Routes Diseño de Pruebas →
                         </a>
 
                     </div>
@@ -1119,7 +1229,7 @@
                             rel="noopener noreferrer"
                             class="mt-4 inline-block text-sm font-bold text-pink-600 hover:underline"
                         >
-                            Ver evidencias →
+                            Ver proyecto Urban Routes Mapa →
                         </a>
 
                     </div>
@@ -1309,6 +1419,67 @@
                     </div>
 
                 </article>
+
+
+
+                <!-- =================================================
+                     PROJECT 08 PORTFOLIO WEBSITE
+                     ================================================= -->
+
+                <article
+                    class="grid gap-5 rounded-xl border border-fuchsia-100 border-l-4 border-l-fuchsia-600 bg-gradient-to-br from-fuchsia-50 to-white p-6 shadow-sm transition hover:-translate-y-0.5 hover:shadow-lg sm:grid-cols-[38px_1fr]"
+                >
+
+                    <div class="pt-1 text-xs font-extrabold text-fuchsia-600">08</div>
+
+                    <div>
+
+                        <p class="mb-1 text-xs font-extrabold tracking-wider text-fuchsia-600">
+                            WEB / FRONT-END
+                        </p>
+
+                        <h3 class="mb-3 text-xl font-bold text-slate-900">
+                            Portafolio QA Web
+                        </h3>
+
+                        <p class="mb-2 text-sm leading-7 text-slate-600">
+                            <strong>Problema:</strong> Crear una plataforma personal para mostrar proyectos, habilidades y experiencia de QA de forma profesional y accesible.
+                        </p>
+
+                        <p class="mb-2 text-sm leading-7 text-slate-600">
+                            <strong>Qué hice:</strong> Desarrollé y mejoré el sitio con HTML, CSS, JavaScript y Vite. Implementé diseño responsive, modo oscuro / claro, traducción ES / EN, selector de idioma personalizado, preferencias con LocalStorage, navegación sticky, animaciones de scroll, iconos SVG animados y despliegue con GitHub Pages.
+                        </p>
+
+                        <p class="text-sm leading-7 text-slate-600">
+                            <strong>Resultado:</strong> Portfolio bilingüe con cambio de tema, navegación adaptable, currículum visualizable y descargable, y microinteracciones para los botones sociales.
+                        </p>
+
+                        <div class="mt-4 flex flex-wrap gap-2">
+                            <span class="rounded-full bg-fuchsia-100 px-3 py-1 text-xs font-medium text-fuchsia-700">HTML</span>
+                            <span class="rounded-full bg-fuchsia-100 px-3 py-1 text-xs font-medium text-fuchsia-700">CSS</span>
+                            <span class="rounded-full bg-fuchsia-100 px-3 py-1 text-xs font-medium text-fuchsia-700">JavaScript</span>
+                            <span class="rounded-full bg-fuchsia-100 px-3 py-1 text-xs font-medium text-fuchsia-700">Vite</span>
+                            <span class="rounded-full bg-fuchsia-100 px-3 py-1 text-xs font-medium text-fuchsia-700">Responsive Design</span>
+                            <span class="rounded-full bg-fuchsia-100 px-3 py-1 text-xs font-medium text-fuchsia-700">ES / EN</span>
+                            <span class="rounded-full bg-fuchsia-100 px-3 py-1 text-xs font-medium text-fuchsia-700">Dark / Light Mode</span>
+                            <span class="rounded-full bg-fuchsia-100 px-3 py-1 text-xs font-medium text-fuchsia-700">LocalStorage</span>
+                            <span class="rounded-full bg-fuchsia-100 px-3 py-1 text-xs font-medium text-fuchsia-700">SVG Animation</span>
+                            <span class="rounded-full bg-fuchsia-100 px-3 py-1 text-xs font-medium text-fuchsia-700">GitHub Pages</span>
+                        </div>
+
+                        <span
+                            class="mt-4 inline-block text-sm font-bold text-fuchsia-700"
+                            aria-label="Página actual"
+                        >
+                            Página actual
+                        </span>
+
+                    </div>
+
+                </article>
+
+
+        
 
             </div>
 
@@ -1528,6 +1699,62 @@
 
 
         <!-- =====================================================
+             CURRÍCULUM
+             ===================================================== -->
+
+        <section
+            id="curriculum"
+            class="border-b border-slate-200 py-14"
+        >
+
+            <div class="mb-7">
+                <h2 class="text-2xl font-bold tracking-tight text-slate-900">
+                    📄 Currículum
+                </h2>
+                <div class="mt-2 h-1 w-10 rounded-full bg-gradient-to-r from-blue-600 to-violet-500"></div>
+            </div>
+
+            <div class="resume-card">
+
+                <div class="resume-toolbar">
+                    <div class="resume-copy">
+                        <p class="resume-title">Currículum profesional</p>
+                        <p class="resume-subtitle" id="resume-language-note">Versión en español</p>
+                    </div>
+
+                    <div class="resume-actions">
+
+                        <div class="resume-menu-group">
+                            <button type="button" id="resume-view-button" class="resume-button resume-button-secondary" aria-haspopup="true" aria-expanded="false">
+                                <span id="resume-view-label">Visualizar CV</span>
+                                <svg class="resume-chevron" viewBox="0 0 24 24" aria-hidden="true"><path d="m7 10 5 5 5-5"></path></svg>
+                            </button>
+                            <div id="resume-view-menu" class="resume-menu" role="menu">
+                                <a class="resume-menu-option" href="cv/CV_Freddy_Ramirez_Rede_QA_ES.pdf" target="_blank" rel="noopener noreferrer" data-resume-lang="es" data-action="view" role="menuitem">Español</a>
+                                <a class="resume-menu-option" href="cv/CV_Freddy_Ramirez_Rede_QA_EN.pdf" target="_blank" rel="noopener noreferrer" data-resume-lang="en" data-action="view" role="menuitem">English</a>
+                            </div>
+                        </div>
+
+                        <div class="resume-menu-group">
+                            <button type="button" id="resume-download-button" class="resume-button resume-button-primary" aria-haspopup="true" aria-expanded="false">
+                                <span id="resume-download-label">Descargar CV</span>
+                                <svg class="resume-chevron" viewBox="0 0 24 24" aria-hidden="true"><path d="m7 10 5 5 5-5"></path></svg>
+                            </button>
+                            <div id="resume-download-menu" class="resume-menu" role="menu">
+                                <a class="resume-menu-option" href="cv/CV_Freddy_Ramirez_Rede_QA_ES.pdf" download="CV_Freddy_Ramirez_Rede_QA_ES.pdf" data-resume-lang="es" data-action="download" role="menuitem">Español</a>
+                                <a class="resume-menu-option" href="cv/CV_Freddy_Ramirez_Rede_QA_EN.pdf" download="CV_Freddy_Ramirez_Rede_QA_EN.pdf" data-resume-lang="en" data-action="download" role="menuitem">English</a>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
              CONTACTO
              ===================================================== -->
 
@@ -1573,9 +1800,12 @@
 
                     <a
                         href="mailto:freddyrmzrede@gmail.com"
-                        class="rounded-lg border border-blue-100 bg-gradient-to-r from-blue-50 to-violet-50 px-4 py-2.5 text-sm font-bold text-slate-700 transition hover:-translate-y-0.5 hover:border-blue-200 hover:text-blue-600 hover:shadow-sm"
+                        data-icon="mail" class="contact-social-link itshover-social rounded-lg border border-blue-100 bg-gradient-to-r from-blue-50 to-violet-50 px-4 py-2.5 text-sm font-bold text-slate-700 transition hover:-translate-y-0.5 hover:border-blue-200 hover:text-blue-600 hover:shadow-sm"
                     >
-                        📧 Email
+                        <svg class="social-icon itshover-icon" viewBox="0 0 24 24" aria-hidden="true">
+                            <path fill="currentColor" d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2Zm0 4-8 5-8-5V6l8 5 8-5v2Z"/>
+                        </svg>
+                        <span>Email</span>
                     </a>
 
 
@@ -1583,9 +1813,12 @@
                         href="https://wa.me/529995064391"
                         target="_blank"
                         rel="noopener noreferrer"
-                        class="rounded-lg border border-green-100 bg-green-50 px-4 py-2.5 text-sm font-bold text-green-700 transition hover:-translate-y-0.5 hover:shadow-sm"
+                        data-icon="whatsapp" class="contact-social-link itshover-social rounded-lg border border-green-100 bg-green-50 px-4 py-2.5 text-sm font-bold text-green-700 transition hover:-translate-y-0.5 hover:shadow-sm"
                     >
-                        📱 WhatsApp
+                        <svg class="social-icon itshover-icon" viewBox="0 0 24 24" aria-hidden="true">
+                            <path fill="currentColor" d="M12 2a9.9 9.9 0 0 0-8.56 14.87L2 22l5.27-1.38A10 10 0 1 0 12 2Zm0 18a8 8 0 0 1-4.07-1.11l-.29-.17-3.13.82.84-3.05-.19-.31A8 8 0 1 1 12 20Zm4.39-5.98c-.24-.12-1.42-.7-1.64-.78-.22-.08-.38-.12-.54.12-.16.24-.62.78-.76.94-.14.16-.28.18-.52.06-.24-.12-1.01-.37-1.92-1.18-.71-.63-1.19-1.41-1.33-1.65-.14-.24-.02-.37.1-.49.11-.11.24-.28.36-.42.12-.14.16-.24.24-.4.08-.16.04-.3-.02-.42-.06-.12-.54-1.31-.74-1.8-.19-.47-.39-.41-.54-.42h-.46c-.16 0-.42.06-.64.3-.22.24-.84.82-.84 2s.86 2.32.98 2.48c.12.16 1.68 2.57 4.07 3.6.57.25 1.02.4 1.37.51.58.18 1.11.15 1.53.09.47-.07 1.42-.58 1.62-1.13.2-.56.2-1.03.14-1.13-.06-.1-.22-.16-.46-.28Z"/>
+                        </svg>
+                        <span>WhatsApp</span>
                     </a>
 
 
@@ -1593,9 +1826,12 @@
                         href="https://www.linkedin.com/in/freddy-ram%C3%ADrez-rede-8b4778283"
                         target="_blank"
                         rel="noopener noreferrer"
-                        class="rounded-lg border border-blue-100 bg-blue-50 px-4 py-2.5 text-sm font-bold text-blue-700 transition hover:-translate-y-0.5 hover:shadow-sm"
+                        data-icon="linkedin" class="contact-social-link itshover-social rounded-lg border border-blue-100 bg-blue-50 px-4 py-2.5 text-sm font-bold text-blue-700 transition hover:-translate-y-0.5 hover:shadow-sm"
                     >
-                        🔗 LinkedIn
+                        <svg class="social-icon itshover-icon" viewBox="0 0 24 24" aria-hidden="true">
+                            <path fill="currentColor" d="M20.45 20.45h-3.56v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.34V8.99h3.42v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.61 0 4.27 2.37 4.27 5.46v6.29ZM5.32 7.43a2.07 2.07 0 1 1 0-4.14 2.07 2.07 0 0 1 0 4.14ZM3.54 20.45H7.1V8.99H3.54v11.46ZM22.23 0H1.77C.79 0 0 .77 0 1.72v20.56C0 23.23.79 24 1.77 24h20.46c.98 0 1.77-.77 1.77-1.72V1.72C24 .77 23.21 0 22.23 0Z"/>
+                        </svg>
+                        <span>LinkedIn</span>
                     </a>
 
 
@@ -1603,9 +1839,12 @@
                         href="https://github.com/yizzitt"
                         target="_blank"
                         rel="noopener noreferrer"
-                        class="rounded-lg border border-slate-200 bg-slate-50 px-4 py-2.5 text-sm font-bold text-slate-700 transition hover:-translate-y-0.5 hover:shadow-sm"
+                        data-icon="github" class="contact-social-link itshover-social rounded-lg border border-slate-200 bg-slate-50 px-4 py-2.5 text-sm font-bold text-slate-700 transition hover:-translate-y-0.5 hover:shadow-sm"
                     >
-                        💻 GitHub
+                        <svg class="social-icon itshover-icon" viewBox="0 0 24 24" aria-hidden="true">
+                            <path fill="currentColor" d="M12 .5A11.5 11.5 0 0 0 8.36 22.9c.58.11.79-.25.79-.56v-2.18c-3.22.7-3.9-1.37-3.9-1.37-.53-1.34-1.29-1.7-1.29-1.7-1.05-.72.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.69 1.26 3.35.96.1-.75.4-1.26.73-1.55-2.57-.29-5.27-1.29-5.27-5.75 0-1.27.45-2.3 1.19-3.11-.12-.29-.52-1.47.11-3.07 0 0 .97-.31 3.17 1.19a10.95 10.95 0 0 1 5.76 0c2.2-1.5 3.17-1.19 3.17-1.19.63 1.6.23 2.78.11 3.07.74.81 1.19 1.84 1.19 3.11 0 4.47-2.71 5.45-5.29 5.74.41.35.78 1.04.78 2.1v3.12c0 .31.21.68.8.56A11.5 11.5 0 0 0 12 .5Z"/>
+                        </svg>
+                        <span>GitHub</span>
                     </a>
 
                 </div>

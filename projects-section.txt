@@ -1,0 +1,756 @@
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             PROYECTOS
+             ===================================================== -->
+
+        <section
+            id="proyectos"
+            class="border-b border-slate-200 py-14"
+        >
+
+            <div class="mb-7">
+
+                <h2
+                    class="text-2xl font-bold tracking-tight text-slate-900"
+                >
+                    🚀 Proyectos
+                </h2>
+
+                <div
+                    class="mt-2 h-1 w-10 rounded-full bg-gradient-to-r from-blue-600 to-violet-500"
+                ></div>
+
+            </div>
+
+
+            <div class="space-y-5">
+
+
+                <!-- =================================================
+                     PROJECT 01
+                     ================================================= -->
+
+                <article
+                    class="grid gap-5 rounded-xl border border-blue-100 border-l-4 border-l-blue-600 bg-gradient-to-br from-blue-50 to-white p-6 shadow-sm transition hover:-translate-y-0.5 hover:shadow-lg sm:grid-cols-[38px_1fr]"
+                >
+
+                    <div
+                        class="pt-1 text-xs font-extrabold text-blue-600"
+                    >
+                        01
+                    </div>
+
+
+                    <div>
+
+                        <p
+                            class="mb-1 text-xs font-extrabold tracking-wider text-blue-600"
+                        >
+                            MOBILE TESTING
+                        </p>
+
+
+                        <h3
+                            class="mb-3 text-xl font-bold text-slate-900"
+                        >
+                            Urban.Lunch — Pruebas funcionales móviles
+                        </h3>
+
+
+                        <p class="mb-2 text-sm leading-7 text-slate-600">
+                            <strong>Problema:</strong>
+                            Validar el flujo completo de una aplicación
+                            móvil de pedidos.
+                        </p>
+
+
+                        <p class="mb-2 text-sm leading-7 text-slate-600">
+                            <strong>Qué hice:</strong>
+                            Diseñé y ejecuté 86 casos de prueba mediante
+                            Android Studio en tres dispositivos Android
+                            con diferentes resoluciones. Realicé pruebas
+                            de llamadas entrantes, orientación, pérdida
+                            de conexión y permisos.
+                        </p>
+
+
+                        <p class="text-sm leading-7 text-slate-600">
+                            <strong>Resultado:</strong>
+                            Identifiqué y documenté 7 defectos relacionados
+                            con interfaz, conservación de información,
+                            tiempos de entrega, entrega de platillos y
+                            permisos.
+                        </p>
+
+
+                        <div
+                            class="mt-4 flex flex-wrap gap-2"
+                        >
+
+                            <span class="rounded-full bg-blue-100 px-3 py-1 text-xs font-medium text-blue-700">
+                                Android Studio
+                            </span>
+
+                            <span class="rounded-full bg-blue-100 px-3 py-1 text-xs font-medium text-blue-700">
+                                Jira
+                            </span>
+
+                            <span class="rounded-full bg-blue-100 px-3 py-1 text-xs font-medium text-blue-700">
+                                Mobile Testing
+                            </span>
+
+                            <span class="rounded-full bg-blue-100 px-3 py-1 text-xs font-medium text-blue-700">
+                                Compatibilidad
+                            </span>
+
+                            <span class="rounded-full bg-blue-100 px-3 py-1 text-xs font-medium text-blue-700">
+                                Interrupciones
+                            </span>
+
+                            <span class="rounded-full bg-blue-100 px-3 py-1 text-xs font-medium text-blue-700">
+                                Permisos
+                            </span>
+
+                        </div>
+
+
+                        <a
+                            href="https://docs.google.com/spreadsheets/d/12u60fR5qm8E33TXLW3LYZ-OETMWr-atjF1MJkziYHVE/edit?usp=sharing"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="mt-4 inline-block text-sm font-bold text-blue-600 hover:underline"
+                        >
+                            Ver evidencias →
+                        </a>
+
+                    </div>
+
+                </article>
+
+
+                <!-- =================================================
+                     PROJECT 02
+                     ================================================= -->
+
+                <article
+                    class="grid gap-5 rounded-xl border border-violet-100 border-l-4 border-l-violet-600 bg-gradient-to-br from-violet-50 to-white p-6 shadow-sm transition hover:-translate-y-0.5 hover:shadow-lg sm:grid-cols-[38px_1fr]"
+                >
+
+                    <div
+                        class="pt-1 text-xs font-extrabold text-violet-600"
+                    >
+                        02
+                    </div>
+
+
+                    <div>
+
+                        <p
+                            class="mb-1 text-xs font-extrabold tracking-wider text-violet-600"
+                        >
+                            API TESTING
+                        </p>
+
+
+                        <h3
+                            class="mb-3 text-xl font-bold text-slate-900"
+                        >
+                            Urban Routes — Pruebas de API REST
+                        </h3>
+
+
+                        <p class="mb-2 text-sm leading-7 text-slate-600">
+                            <strong>Problema:</strong>
+                            Validar el comportamiento de un endpoint REST
+                            mediante distintos escenarios de prueba.
+                        </p>
+
+
+                        <p class="mb-2 text-sm leading-7 text-slate-600">
+                            <strong>Qué hice:</strong>
+                            Diseñé y ejecuté casos para validar solicitudes
+                            POST, parámetros, cuerpos JSON, tipos de datos,
+                            límites, campos obligatorios y manejo de errores.
+                        </p>
+
+
+                        <p class="text-sm leading-7 text-slate-600">
+                            <strong>Resultado:</strong>
+                            Identifiqué y documenté defectos relacionados
+                            con validaciones incorrectas y respuestas
+                            inesperadas.
+                        </p>
+
+
+                        <div class="mt-4 flex flex-wrap gap-2">
+
+                            <span class="rounded-full bg-violet-100 px-3 py-1 text-xs font-medium text-violet-700">
+                                Postman
+                            </span>
+
+                            <span class="rounded-full bg-violet-100 px-3 py-1 text-xs font-medium text-violet-700">
+                                API Testing
+                            </span>
+
+                            <span class="rounded-full bg-violet-100 px-3 py-1 text-xs font-medium text-violet-700">
+                                REST
+                            </span>
+
+                            <span class="rounded-full bg-violet-100 px-3 py-1 text-xs font-medium text-violet-700">
+                                HTTP
+                            </span>
+
+                            <span class="rounded-full bg-violet-100 px-3 py-1 text-xs font-medium text-violet-700">
+                                JSON
+                            </span>
+
+                            <span class="rounded-full bg-violet-100 px-3 py-1 text-xs font-medium text-violet-700">
+                                Jira
+                            </span>
+
+                        </div>
+
+
+                        <a
+                            href="https://docs.google.com/spreadsheets/d/1-AapNYjTlC4CPWXquC4JqeetD6eGT8dkTpL8Zjiv4c4/edit?usp=sharing"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="mt-4 inline-block text-sm font-bold text-violet-600 hover:underline"
+                        >
+                            Ver evidencias →
+                        </a>
+
+                    </div>
+
+                </article>
+
+
+                <!-- =================================================
+                     PROJECT 03
+                     ================================================= -->
+
+                <article
+                    class="grid gap-5 rounded-xl border border-cyan-100 border-l-4 border-l-cyan-600 bg-gradient-to-br from-cyan-50 to-white p-6 shadow-sm transition hover:-translate-y-0.5 hover:shadow-lg sm:grid-cols-[38px_1fr]"
+                >
+
+                    <div
+                        class="pt-1 text-xs font-extrabold text-cyan-600"
+                    >
+                        03
+                    </div>
+
+
+                    <div>
+
+                        <p
+                            class="mb-1 text-xs font-extrabold tracking-wider text-cyan-600"
+                        >
+                            FUNCTIONAL TESTING
+                        </p>
+
+
+                        <h3
+                            class="mb-3 text-xl font-bold text-slate-900"
+                        >
+                            Urban Routes — Pruebas funcionales web
+                        </h3>
+
+
+                        <p class="mb-2 text-sm leading-7 text-slate-600">
+                            <strong>Problema:</strong>
+                            Validar el flujo de reserva, método de pago,
+                            validaciones, precio, temporizador y cancelación.
+                        </p>
+
+
+                        <p class="text-sm leading-7 text-slate-600">
+                            <strong>Qué hice:</strong>
+                            Ejecuté pruebas funcionales en Chrome y Firefox,
+                            comparé la interfaz con Figma y documenté
+                            defectos en Jira.
+                        </p>
+
+
+                        <div class="mt-4 flex flex-wrap gap-2">
+
+                            <span class="rounded-full bg-cyan-100 px-3 py-1 text-xs font-medium text-cyan-700">
+                                Jira
+                            </span>
+
+                            <span class="rounded-full bg-cyan-100 px-3 py-1 text-xs font-medium text-cyan-700">
+                                Figma
+                            </span>
+
+                            <span class="rounded-full bg-cyan-100 px-3 py-1 text-xs font-medium text-cyan-700">
+                                Chrome
+                            </span>
+
+                            <span class="rounded-full bg-cyan-100 px-3 py-1 text-xs font-medium text-cyan-700">
+                                Firefox
+                            </span>
+
+                            <span class="rounded-full bg-cyan-100 px-3 py-1 text-xs font-medium text-cyan-700">
+                                DevTools
+                            </span>
+
+                        </div>
+
+
+                        <a
+                            href="https://docs.google.com/document/d/1lM0RRkGqqyTxYkXLqrxGQGM0Wu8F2jYW/edit?usp=sharing"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="mt-4 inline-block text-sm font-bold text-cyan-700 hover:underline"
+                        >
+                            Ver evidencias →
+                        </a>
+
+                    </div>
+
+                </article>
+
+
+                <!-- =================================================
+                     PROJECT 04
+                     ================================================= -->
+
+                <article
+                    class="grid gap-5 rounded-xl border border-emerald-100 border-l-4 border-l-emerald-600 bg-gradient-to-br from-emerald-50 to-white p-6 shadow-sm transition hover:-translate-y-0.5 hover:shadow-lg sm:grid-cols-[38px_1fr]"
+                >
+
+                    <div
+                        class="pt-1 text-xs font-extrabold text-emerald-600"
+                    >
+                        04
+                    </div>
+
+
+                    <div>
+
+                        <p
+                            class="mb-1 text-xs font-extrabold tracking-wider text-emerald-700"
+                        >
+                            TEST DESIGN
+                        </p>
+
+
+                        <h3
+                            class="mb-3 text-xl font-bold text-slate-900"
+                        >
+                            Urban Routes — Diseño de pruebas
+                        </h3>
+
+
+                        <p class="mb-2 text-sm leading-7 text-slate-600">
+                            <strong>Problema:</strong>
+                            Analizar requisitos y diseñar una estrategia
+                            de pruebas para diferentes datos y escenarios.
+                        </p>
+
+
+                        <p class="text-sm leading-7 text-slate-600">
+                            <strong>Qué hice:</strong>
+                            Trabajé con clases de equivalencia, valores
+                            límite, escenarios, descomposición atómica,
+                            mapas mentales y diagramas de flujo.
+                        </p>
+
+
+                        <div class="mt-4 flex flex-wrap gap-2">
+
+                            <span class="rounded-full bg-emerald-100 px-3 py-1 text-xs font-medium text-emerald-700">
+                                Equivalence Classes
+                            </span>
+
+                            <span class="rounded-full bg-emerald-100 px-3 py-1 text-xs font-medium text-emerald-700">
+                                Boundary Values
+                            </span>
+
+                            <span class="rounded-full bg-emerald-100 px-3 py-1 text-xs font-medium text-emerald-700">
+                                Requirements
+                            </span>
+
+                            <span class="rounded-full bg-emerald-100 px-3 py-1 text-xs font-medium text-emerald-700">
+                                Atomic Decomposition
+                            </span>
+
+                            <span class="rounded-full bg-emerald-100 px-3 py-1 text-xs font-medium text-emerald-700">
+                                Flowcharts
+                            </span>
+
+                        </div>
+
+
+                        <a
+                            href="https://docs.google.com/document/d/1M2Ao3J99xIZjXpjm5LLW6r6qtyEoWJg2/edit?usp=sharing"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="mt-4 inline-block text-sm font-bold text-emerald-700 hover:underline"
+                        >
+                            Ver evidencias →
+                        </a>
+
+                    </div>
+
+                </article>
+
+
+                <!-- =================================================
+                     PROJECT 05
+                     ================================================= -->
+
+                <article
+                    class="grid gap-5 rounded-xl border border-pink-100 border-l-4 border-l-pink-600 bg-gradient-to-br from-pink-50 to-white p-6 shadow-sm transition hover:-translate-y-0.5 hover:shadow-lg sm:grid-cols-[38px_1fr]"
+                >
+
+                    <div
+                        class="pt-1 text-xs font-extrabold text-pink-600"
+                    >
+                        05
+                    </div>
+
+
+                    <div>
+
+                        <p
+                            class="mb-1 text-xs font-extrabold tracking-wider text-pink-600"
+                        >
+                            FUNCTIONAL TESTING
+                        </p>
+
+
+                        <h3
+                            class="mb-3 text-xl font-bold text-slate-900"
+                        >
+                            Urban Routes — Pruebas funcionales del mapa
+                        </h3>
+
+
+                        <p class="mb-2 text-sm leading-7 text-slate-600">
+                            <strong>Qué hice:</strong>
+                            Diseñé y ejecuté 24 casos de prueba para validar
+                            navegación, zoom, búsqueda de direcciones,
+                            marcadores, objetos 3D, modos de visualización
+                            y Street View.
+                        </p>
+
+
+                        <p class="text-sm leading-7 text-slate-600">
+                            <strong>Resultado:</strong>
+                            Identifiqué y documenté 9 defectos con resultado
+                            esperado, resultado actual y severidad.
+                        </p>
+
+
+                        <div class="mt-4 flex flex-wrap gap-2">
+
+                            <span class="rounded-full bg-pink-100 px-3 py-1 text-xs font-medium text-pink-700">
+                                Functional Testing
+                            </span>
+
+                            <span class="rounded-full bg-pink-100 px-3 py-1 text-xs font-medium text-pink-700">
+                                Jira
+                            </span>
+
+                            <span class="rounded-full bg-pink-100 px-3 py-1 text-xs font-medium text-pink-700">
+                                Test Cases
+                            </span>
+
+                            <span class="rounded-full bg-pink-100 px-3 py-1 text-xs font-medium text-pink-700">
+                                Bug Reporting
+                            </span>
+
+                        </div>
+
+
+                        <a
+                            href="https://docs.google.com/spreadsheets/d/1dudp6q3yuWjrvYe3QiJzQj7yuVdo_s_5hfyq0Tfx-aU/edit?usp=sharing"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="mt-4 inline-block text-sm font-bold text-pink-600 hover:underline"
+                        >
+                            Ver evidencias →
+                        </a>
+
+                    </div>
+
+                </article>
+
+
+                <!-- =================================================
+                     PROJECT 06 SQL
+                     ================================================= -->
+
+                <article
+                    class="grid gap-5 rounded-xl border border-amber-200 border-l-4 border-l-amber-600 bg-gradient-to-br from-amber-50 to-white p-6 shadow-sm transition hover:-translate-y-0.5 hover:shadow-lg sm:grid-cols-[38px_1fr]"
+                >
+
+                    <div
+                        class="pt-1 text-xs font-extrabold text-amber-600"
+                    >
+                        06
+                    </div>
+
+
+                    <div>
+
+                        <p
+                            class="mb-1 text-xs font-extrabold tracking-wider text-amber-700"
+                        >
+                            SQL · DATABASE TESTING
+                        </p>
+
+
+                        <h3
+                            class="mb-3 text-xl font-bold text-slate-900"
+                        >
+                            Chicago Taxi — SQL y análisis de datos
+                        </h3>
+
+
+                        <p class="mb-2 text-sm leading-7 text-slate-600">
+                            <strong>Problema:</strong>
+                            Consultar y analizar información de una base
+                            de datos relacionada con servicios de taxi.
+                        </p>
+
+
+                        <p class="mb-2 text-sm leading-7 text-slate-600">
+                            <strong>Qué hice:</strong>
+                            Realicé consultas utilizando SELECT, COUNT,
+                            GROUP BY, HAVING, CASE, filtros por fechas
+                            e INNER JOIN para analizar automóviles,
+                            compañías, condiciones climáticas y viajes.
+                        </p>
+
+
+                        <p class="text-sm leading-7 text-slate-600">
+                            <strong>Resultado:</strong>
+                            Validé los resultados de los diferentes
+                            ejercicios del proyecto, incluyendo el
+                            conteo documentado de 5,529 automóviles.
+                        </p>
+
+
+                        <div class="mt-4 flex flex-wrap gap-2">
+
+                            <span class="rounded-full bg-amber-100 px-3 py-1 text-xs font-medium text-amber-700">
+                                SQL
+                            </span>
+
+                            <span class="rounded-full bg-amber-100 px-3 py-1 text-xs font-medium text-amber-700">
+                                SELECT
+                            </span>
+
+                            <span class="rounded-full bg-amber-100 px-3 py-1 text-xs font-medium text-amber-700">
+                                COUNT
+                            </span>
+
+                            <span class="rounded-full bg-amber-100 px-3 py-1 text-xs font-medium text-amber-700">
+                                GROUP BY
+                            </span>
+
+                            <span class="rounded-full bg-amber-100 px-3 py-1 text-xs font-medium text-amber-700">
+                                HAVING
+                            </span>
+
+                            <span class="rounded-full bg-amber-100 px-3 py-1 text-xs font-medium text-amber-700">
+                                CASE
+                            </span>
+
+                            <span class="rounded-full bg-amber-100 px-3 py-1 text-xs font-medium text-amber-700">
+                                INNER JOIN
+                            </span>
+
+                            <span class="rounded-full bg-amber-100 px-3 py-1 text-xs font-medium text-amber-700">
+                                Filtros por fecha
+                            </span>
+
+                        </div>
+
+
+                        <a
+                            href="https://docs.google.com/document/d/1lbd0Kz_7DQMdLgl1pGJOFppTj_UVxfip/edit?usp=sharing&ouid=108860008182683406363&rtpof=true&sd=true"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="mt-4 inline-block text-sm font-bold text-amber-700 hover:underline"
+                        >
+                            Ver proyecto SQL →
+                        </a>
+
+                    </div>
+
+                </article>
+
+
+                <!-- =================================================
+                     PROJECT 07 PYTHON
+                     ================================================= -->
+
+                <article
+                    class="grid gap-5 rounded-xl border border-indigo-100 border-l-4 border-l-indigo-600 bg-gradient-to-br from-indigo-50 to-white p-6 shadow-sm transition hover:-translate-y-0.5 hover:shadow-lg sm:grid-cols-[38px_1fr]"
+                >
+
+                    <div
+                        class="pt-1 text-xs font-extrabold text-indigo-600"
+                    >
+                        07
+                    </div>
+
+
+                    <div>
+
+                        <p
+                            class="mb-1 text-xs font-extrabold tracking-wider text-indigo-600"
+                        >
+                            EN CURSO · QA AUTOMATION
+                        </p>
+
+
+                        <h3
+                            class="mb-3 text-xl font-bold text-slate-900"
+                        >
+                            Automatización de pruebas con Python
+                        </h3>
+
+
+                        <p class="mb-2 text-sm leading-7 text-slate-600">
+                            Proyecto en desarrollo enfocado en aprender
+                            y aplicar Python para la automatización de
+                            pruebas dentro del área de Quality Assurance.
+                        </p>
+
+
+                        <p class="text-sm leading-7 text-slate-600">
+                            <strong>Objetivo:</strong>
+                            Desarrollar conocimientos prácticos de
+                            programación y automatización de pruebas
+                            para complementar mi experiencia en QA Manual.
+                        </p>
+
+
+                        <div class="mt-4 flex flex-wrap gap-2">
+
+                            <span class="rounded-full bg-indigo-100 px-3 py-1 text-xs font-medium text-indigo-700">
+                                Python
+                            </span>
+
+                            <span class="rounded-full bg-indigo-100 px-3 py-1 text-xs font-medium text-indigo-700">
+                                QA Automation
+                            </span>
+
+                            <span class="rounded-full bg-indigo-100 px-3 py-1 text-xs font-medium text-indigo-700">
+                                Automated Testing
+                            </span>
+
+                            <span class="rounded-full bg-indigo-100 px-3 py-1 text-xs font-medium text-indigo-700">
+                                Testing
+                            </span>
+
+                        </div>
+
+
+                        <span
+                            class="mt-4 inline-block text-sm font-extrabold text-indigo-600"
+                        >
+                            🚧 Proyecto en desarrollo
+                        </span>
+
+                    </div>
+
+                </article>
+
+
+
+                <!-- =================================================
+                     PROJECT 08 PORTFOLIO WEBSITE
+                     ================================================= -->
+
+                <article
+                    class="grid gap-5 rounded-xl border border-fuchsia-100 border-l-4 border-l-fuchsia-600 bg-gradient-to-br from-fuchsia-50 to-white p-6 shadow-sm transition hover:-translate-y-0.5 hover:shadow-lg sm:grid-cols-[38px_1fr]"
+                >
+
+                    <div class="pt-1 text-xs font-extrabold text-fuchsia-600">08</div>
+
+                    <div>
+
+                        <p class="mb-1 text-xs font-extrabold tracking-wider text-fuchsia-600">
+                            WEB / FRONT-END
+                        </p>
+
+                        <h3 class="mb-3 text-xl font-bold text-slate-900">
+                            Portafolio QA Web
+                        </h3>
+
+                        <p class="mb-2 text-sm leading-7 text-slate-600">
+                            <strong>Problema:</strong> Crear una plataforma personal para mostrar proyectos, habilidades y experiencia de QA de forma profesional y accesible.
+                        </p>
+
+                        <p class="mb-2 text-sm leading-7 text-slate-600">
+                            <strong>Qué hice:</strong> Desarrollé y mejoré el sitio con HTML, CSS, JavaScript y Vite. Implementé diseño responsive, modo oscuro / claro, traducción ES / EN, selector de idioma personalizado, preferencias con LocalStorage, navegación sticky, animaciones de scroll, iconos SVG animados y despliegue con GitHub Pages.
+                        </p>
+
+                        <p class="text-sm leading-7 text-slate-600">
+                            <strong>Resultado:</strong> Portfolio bilingüe con cambio de tema, navegación adaptable, currículum visualizable y descargable, y microinteracciones para los botones sociales.
+                        </p>
+
+                        <div class="mt-4 flex flex-wrap gap-2">
+                            <span class="rounded-full bg-fuchsia-100 px-3 py-1 text-xs font-medium text-fuchsia-700">HTML</span>
+                            <span class="rounded-full bg-fuchsia-100 px-3 py-1 text-xs font-medium text-fuchsia-700">CSS</span>
+                            <span class="rounded-full bg-fuchsia-100 px-3 py-1 text-xs font-medium text-fuchsia-700">JavaScript</span>
+                            <span class="rounded-full bg-fuchsia-100 px-3 py-1 text-xs font-medium text-fuchsia-700">Vite</span>
+                            <span class="rounded-full bg-fuchsia-100 px-3 py-1 text-xs font-medium text-fuchsia-700">Responsive Design</span>
+                            <span class="rounded-full bg-fuchsia-100 px-3 py-1 text-xs font-medium text-fuchsia-700">ES / EN</span>
+                            <span class="rounded-full bg-fuchsia-100 px-3 py-1 text-xs font-medium text-fuchsia-700">Dark / Light Mode</span>
+                            <span class="rounded-full bg-fuchsia-100 px-3 py-1 text-xs font-medium text-fuchsia-700">LocalStorage</span>
+                            <span class="rounded-full bg-fuchsia-100 px-3 py-1 text-xs font-medium text-fuchsia-700">SVG Animation</span>
+                            <span class="rounded-full bg-fuchsia-100 px-3 py-1 text-xs font-medium text-fuchsia-700">GitHub Pages</span>
+                        </div>
+
+                        <a
+                            href="https://yizzitt.github.io/portfolio-qa/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="mt-4 inline-block text-sm font-bold text-fuchsia-700 hover:underline"
+                        >
+                            Ver sitio web →
+                        </a>
+
+                    </div>
+
+                </article>
+
+
+        
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             EXPERIENCIA
+             ===================================================== -->
+
+        <section
+            id="experiencia"
+            class="border-b border-slate-200 py-14"
+        >
+
+            <div class="mb-7">
+
+                <h2
+                    class="text-2xl font-bold tracking-tight text-slate-900"
+                >
+                    💼 Experiencia
+                </h2>
+
+                <div
+                    class="mt-2 h-1 w-10 rounded-full bg-gradient-to-r from-blue-600 to-violet-500"
