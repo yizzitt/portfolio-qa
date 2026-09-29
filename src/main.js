@@ -899,3 +899,214 @@ const setupCursorGlow = () => {
 setupCursorGlow()
 
 applyLanguage(currentLanguage)
+
+/* =====================================================
+   MOBILE POPOVER FALLBACK
+   iOS Safari can clip/relocate fixed descendants inside
+   sticky/backdrop-filter navigation. On phones we therefore
+   use one dedicated body-level popover and never move the
+   original menus in the DOM.
+   ===================================================== */
+(() => {
+  const mobileQuery = window.matchMedia('(max-width: 700px)')
+  let mobilePopover = null
+  let mobilePopoverType = null
+  let mobilePopoverButton = null
+
+  const isMobile = () => mobileQuery.matches
+
+  const ensureMobilePopover = () => {
+    if (mobilePopover) return mobilePopover
+    mobilePopover = document.createElement('div')
+    mobilePopover.id = 'mobile-popover'
+    mobilePopover.setAttribute('role', 'presentation')
+    document.body.appendChild(mobilePopover)
+    return mobilePopover
+  }
+
+  const closeMobilePopover = () => {
+    if (!mobilePopover) return
+    mobilePopover.classList.remove('is-open')
+    mobilePopover.replaceChildren()
+    mobilePopoverType = null
+    mobilePopoverButton = null
+    document.querySelectorAll('.resume-menu-group.is-open').forEach(group => {
+      group.classList.remove('is-open')
+      group.querySelector('.resume-button')?.setAttribute('aria-expanded', 'false')
+    })
+    languageButton?.setAttribute('aria-expanded', 'false')
+  }
+
+  const positionMobilePopover = button => {
+    if (!mobilePopover || !button) return
+
+    const rect = button.getBoundingClientRect()
+    const vv = window.visualViewport
+    const viewportWidth = vv?.width || window.innerWidth
+    const viewportHeight = vv?.height || window.innerHeight
+    const offsetLeft = vv?.offsetLeft || 0
+    const offsetTop = vv?.offsetTop || 0
+    const padding = 12
+    const width = Math.min(220, viewportWidth - padding * 2)
+
+    mobilePopover.style.width = `${Math.round(width)}px`
+
+    // Force layout so Safari gives us the real height before deciding
+    // whether the popover fits below or above the trigger.
+    const popoverHeight = mobilePopover.offsetHeight
+    let left = rect.right - width
+    let top = rect.bottom + 8
+
+    left = Math.max(offsetLeft + padding, Math.min(left, offsetLeft + viewportWidth - width - padding))
+
+    const lowerLimit = offsetTop + viewportHeight - padding
+    if (top + popoverHeight > lowerLimit && rect.top - popoverHeight - 8 >= offsetTop + padding) {
+      top = rect.top - popoverHeight - 8
+    }
+
+    mobilePopover.style.left = `${Math.round(left)}px`
+    mobilePopover.style.top = `${Math.round(top)}px`
+  }
+
+  const openLanguagePopover = button => {
+    const popover = ensureMobilePopover()
+    closeMobilePopover()
+    mobilePopoverType = 'language'
+    mobilePopoverButton = button
+
+    const menu = document.getElementById('language-menu')
+    if (!menu) return
+
+    const options = [...menu.querySelectorAll('.language-option')]
+    options.forEach(source => {
+      const option = document.createElement('button')
+      option.type = 'button'
+      option.className = 'mobile-popover-option'
+      option.setAttribute('role', 'option')
+      option.dataset.lang = source.dataset.lang || 'es'
+      option.textContent = source.textContent.trim()
+      option.setAttribute('aria-selected', source.getAttribute('aria-selected') || 'false')
+      option.addEventListener('click', event => {
+        event.preventDefault()
+        event.stopPropagation()
+        const language = option.dataset.lang === 'en' ? 'en' : 'es'
+        if (languageSelect) languageSelect.value = language
+        localStorage.setItem('portfolio-language', language)
+        applyLanguage(language)
+        closeMobilePopover()
+      })
+      popover.appendChild(option)
+    })
+
+    popover.className = 'is-open mobile-popover-language'
+    button.setAttribute('aria-expanded', 'true')
+    requestAnimationFrame(() => positionMobilePopover(button))
+  }
+
+  const openResumePopover = button => {
+    const group = button.closest('.resume-menu-group')
+    const menu = group?.querySelector('.resume-menu')
+    if (!group || !menu) return
+
+    const popover = ensureMobilePopover()
+    closeMobilePopover()
+    mobilePopoverType = 'resume'
+    mobilePopoverButton = button
+    group.classList.add('is-open')
+    button.setAttribute('aria-expanded', 'true')
+
+    menu.querySelectorAll('.resume-menu-option').forEach(source => {
+      const option = document.createElement('a')
+      option.className = 'mobile-popover-option'
+      option.href = source.href
+      option.dataset.resumeLang = source.dataset.resumeLang || 'es'
+      option.dataset.action = source.dataset.action || 'view'
+      option.textContent = source.textContent.trim()
+      option.setAttribute('role', 'menuitem')
+
+      if (option.dataset.action === 'download') {
+        option.download = source.getAttribute('download') || ''
+      } else {
+        option.target = '_blank'
+        option.rel = 'noopener noreferrer'
+      }
+
+      option.addEventListener('click', () => {
+        // The click itself is the user's gesture, so keep the native
+        // anchor behavior instead of opening the file asynchronously.
+        window.setTimeout(closeMobilePopover, 0)
+      })
+
+      popover.appendChild(option)
+    })
+
+    popover.className = 'is-open mobile-popover-resume'
+    requestAnimationFrame(() => positionMobilePopover(button))
+  }
+
+  document.addEventListener('click', event => {
+    if (!isMobile()) return
+
+    const target = event.target
+    const languageTrigger = target instanceof Element ? target.closest('#language-button') : null
+    const resumeTrigger = target instanceof Element ? target.closest('.resume-button') : null
+
+    if (languageTrigger) {
+      event.preventDefault()
+      event.stopPropagation()
+      if (mobilePopoverType === 'language' && mobilePopover?.classList.contains('is-open')) {
+        closeMobilePopover()
+      } else {
+        openLanguagePopover(languageTrigger)
+      }
+      return
+    }
+
+    if (resumeTrigger) {
+      event.preventDefault()
+      event.stopPropagation()
+      if (mobilePopoverType === 'resume' && mobilePopoverButton === resumeTrigger && mobilePopover?.classList.contains('is-open')) {
+        closeMobilePopover()
+      } else {
+        openResumePopover(resumeTrigger)
+      }
+      return
+    }
+
+    if (mobilePopover?.contains(target)) return
+    closeMobilePopover()
+  }, true)
+
+  document.addEventListener('touchstart', event => {
+    if (!isMobile() || !mobilePopover?.classList.contains('is-open')) return
+    if (!mobilePopover.contains(event.target)) closeMobilePopover()
+  }, { capture: true, passive: true })
+
+  document.addEventListener('keydown', event => {
+    if (event.key === 'Escape') closeMobilePopover()
+  })
+
+  window.addEventListener('resize', () => {
+    if (mobilePopover?.classList.contains('is-open') && mobilePopoverButton) {
+      requestAnimationFrame(() => positionMobilePopover(mobilePopoverButton))
+    }
+  }, { passive: true })
+
+  window.visualViewport?.addEventListener('resize', () => {
+    if (mobilePopover?.classList.contains('is-open') && mobilePopoverButton) {
+      requestAnimationFrame(() => positionMobilePopover(mobilePopoverButton))
+    }
+  }, { passive: true })
+
+  window.visualViewport?.addEventListener('scroll', () => {
+    if (mobilePopover?.classList.contains('is-open') && mobilePopoverButton) {
+      requestAnimationFrame(() => positionMobilePopover(mobilePopoverButton))
+    }
+  }, { passive: true })
+
+  window.addEventListener('scroll', () => {
+    if (mobilePopover?.classList.contains('is-open') && mobilePopoverButton) {
+      requestAnimationFrame(() => positionMobilePopover(mobilePopoverButton))
+    }
+  }, { passive: true })
+})()

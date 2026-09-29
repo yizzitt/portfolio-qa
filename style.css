@@ -3800,3 +3800,86 @@ body.dark .nav-brand {
     bottom: auto !important;
   }
 }
+
+/* =====================================================
+   MOBILE POPOVER FALLBACK
+   Dedicated body-level menu for iOS Safari.
+   ===================================================== */
+#mobile-popover {
+  position: fixed !important;
+  top: 0;
+  left: 0;
+  width: 220px;
+  box-sizing: border-box;
+  padding: 8px;
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  background: var(--surface);
+  box-shadow: 0 18px 42px rgba(16,24,40,.20);
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transform: translateY(-4px) scale(.98);
+  transform-origin: top right;
+  z-index: 2147483646 !important;
+  transition: opacity .14s ease, transform .14s ease, visibility .14s ease;
+}
+
+#mobile-popover.is-open {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+  transform: translateY(0) scale(1);
+}
+
+#mobile-popover .mobile-popover-option {
+  display: flex !important;
+  width: 100%;
+  min-height: 52px;
+  align-items: center;
+  justify-content: flex-start;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0 14px;
+  border: 0;
+  border-radius: 11px;
+  background: transparent;
+  color: var(--ink) !important;
+  font: inherit;
+  font-size: .96rem;
+  font-weight: 700;
+  line-height: 1.2;
+  text-decoration: none !important;
+  text-align: left;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+}
+
+#mobile-popover .mobile-popover-option:hover,
+#mobile-popover .mobile-popover-option:focus-visible,
+#mobile-popover .mobile-popover-option[aria-selected="true"] {
+  background: var(--surface-soft);
+  color: var(--blue) !important;
+  outline: none;
+}
+
+body.dark #mobile-popover {
+  box-shadow: 0 18px 42px rgba(0,0,0,.42);
+}
+
+body.dark #mobile-popover .mobile-popover-option {
+  color: var(--muted-strong) !important;
+}
+
+body.dark #mobile-popover .mobile-popover-option:hover,
+body.dark #mobile-popover .mobile-popover-option:focus-visible,
+body.dark #mobile-popover .mobile-popover-option[aria-selected="true"] {
+  background: #18243a;
+  color: #9abaff !important;
+}
+
+@media (min-width: 701px) {
+  #mobile-popover {
+    display: none !important;
+  }
+}
