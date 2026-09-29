@@ -20,7 +20,7 @@ body {
             #ffffff 38%,
             #f8fafc 100%
         );
-   
+
     color: #1e293b;
 
     font-family:
@@ -382,21 +382,7 @@ main {
 }
 
 .section-title {
-    display: flex;
-
-    align-items: baseline;
-
-    gap: 11px;
-
     margin-bottom: 23px;
-}
-
-.section-title > span {
-    color: #4f46e5;
-
-    font-size: 0.72rem;
-
-    font-weight: 800;
 }
 
 .section-title h2 {
@@ -667,7 +653,7 @@ main {
 
 
 /* =========================================================
-   PROJECT COLORS
+   COLORES DE PROYECTOS
    ========================================================= */
 
 .project-blue {
@@ -679,7 +665,6 @@ main {
         );
 
     border-color: #dbeafe;
-
     border-left-color: #2563eb;
 }
 
@@ -705,7 +690,6 @@ main {
         );
 
     border-color: #e9d5ff;
-
     border-left-color: #7c3aed;
 }
 
@@ -731,7 +715,6 @@ main {
         );
 
     border-color: #cffafe;
-
     border-left-color: #0891b2;
 }
 
@@ -757,7 +740,6 @@ main {
         );
 
     border-color: #d1fae5;
-
     border-left-color: #0f766e;
 }
 
@@ -783,7 +765,6 @@ main {
         );
 
     border-color: #fbcfe8;
-
     border-left-color: #db2777;
 }
 
@@ -809,7 +790,6 @@ main {
         );
 
     border-color: #f6d99f;
-
     border-left-color: #d97706;
 }
 
@@ -835,7 +815,6 @@ main {
         );
 
     border-color: #dbe0ff;
-
     border-left-color: #4f46e5;
 }
 
@@ -972,6 +951,30 @@ main {
 
 .contact-section {
     border-bottom: none;
+}
+
+.contact-intro {
+    max-width: 800px;
+
+    margin-bottom: 23px;
+}
+
+.contact-location {
+    margin: 0 0 8px !important;
+
+    color: #2563eb !important;
+
+    font-size: 0.94rem !important;
+
+    font-weight: 750;
+}
+
+.contact-intro p:last-child {
+    margin: 0;
+
+    color: #64748b;
+
+    font-size: 0.9rem;
 }
 
 .contact-links {
