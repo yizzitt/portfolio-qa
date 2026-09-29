@@ -406,15 +406,17 @@ while ((node = walker.nextNode())) {
   textNodes.push({ node, source: node.nodeValue })
 }
 
+const resumeBase = `${import.meta.env.BASE_URL}cv/`
+
 const resumeFiles = {
   es: {
-    src: 'cv/CV_Freddy_Ramirez_Rede_QA_ES.pdf',
+    src: `${resumeBase}CV_Freddy_Ramirez_Rede_QA_ES.pdf`,
     note: 'Versión en español',
     viewLabel: 'Visualizar CV',
     downloadLabel: 'Descargar CV'
   },
   en: {
-    src: 'cv/CV_Freddy_Ramirez_Rede_QA_EN.pdf',
+    src: `${resumeBase}CV_Freddy_Ramirez_Rede_QA_EN.pdf`,
     note: 'English version',
     viewLabel: 'View resume',
     downloadLabel: 'Download resume'
