@@ -3883,3 +3883,61 @@ body.dark #mobile-popover .mobile-popover-option[aria-selected="true"] {
     display: none !important;
   }
 }
+
+
+/* =====================================================
+   MOBILE iOS NATIVE DROPDOWNS
+   Use the operating system picker instead of custom popovers.
+   ===================================================== */
+.mobile-native-select {
+  display: none;
+}
+
+@media (max-width: 700px) {
+  .mobile-native-select {
+    display: block !important;
+    position: absolute !important;
+    z-index: 100000 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    border: 0 !important;
+    border-radius: inherit !important;
+    background: transparent !important;
+    color: transparent !important;
+    opacity: .01 !important;
+    -webkit-appearance: menulist !important;
+    appearance: auto !important;
+    cursor: pointer !important;
+  }
+
+  .language-picker {
+    position: relative !important;
+  }
+
+  .mobile-native-language {
+    inset: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+  }
+
+  .resume-menu-group {
+    position: relative !important;
+  }
+
+  .mobile-native-resume {
+    inset: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+    border-radius: 14px !important;
+  }
+
+  /* The old custom menus are intentionally disabled on phones. */
+  .language-picker > #language-menu,
+  .resume-menu-group > .resume-menu {
+    display: none !important;
+  }
+
+  #mobile-popover {
+    display: none !important;
+  }
+}

@@ -1,0 +1,1895 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        id="meta-description"
+        content="Portafolio de Freddy Ramírez Rede, QA Tester Junior especializado en pruebas manuales, funcionales, API Testing y SQL."
+    >
+
+    <title id="page-title">
+        Freddy Ramírez Rede | QA Tester
+    </title>
+    <meta name="theme-color" content="#091426">
+
+    <link rel="icon" type="image/svg+xml" href="./favicon-fr.svg?v=2">
+    <link rel="icon" type="image/png" sizes="32x32" href="./favicon-fr-32.png?v=2">
+    <link rel="icon" type="image/png" sizes="16x16" href="./favicon-fr-16.png?v=2">
+    <link rel="shortcut icon" href="./favicon-fr.ico?v=2">
+    <link rel="apple-touch-icon" sizes="180x180" href="./favicon-fr-180.png?v=2">
+
+</head>
+
+
+<body class="bg-slate-50 text-slate-800">
+
+    
+    <!-- =====================================================
+         STICKY NAVIGATION
+         ===================================================== -->
+
+<nav
+        class="sticky top-0 z-50 border-b border-slate-200 bg-white/95 backdrop-blur"
+    >
+
+        <div
+            class="nav-inner mx-auto flex max-w-6xl flex-wrap justify-center gap-x-6 gap-y-2 px-6 py-3 text-xs font-semibold text-slate-500 sm:text-sm"
+        >
+
+            <a class="nav-brand" href="#" aria-label="Volver al inicio">
+                <img src="./fr-logo.png" alt="FR" width="38" height="38">
+            </a>
+
+            <div class="nav-links">
+            <a
+                href="#sobre-mi"
+                class="transition hover:text-blue-600"
+            >
+                Sobre mí
+            </a>
+
+            <a
+                href="#habilidades"
+                class="transition hover:text-blue-600"
+            >
+                Habilidades
+            </a>
+
+            <a
+                href="#proyectos"
+                class="transition hover:text-blue-600"
+            >
+                Proyectos
+            </a>
+
+            <a
+                href="#experiencia"
+                class="transition hover:text-blue-600"
+            >
+                Experiencia
+            </a>
+
+            <a
+                href="#educacion"
+                class="transition hover:text-blue-600"
+            >
+                Educación
+            </a>
+
+            <a
+                href="#curriculum"
+                class="transition hover:text-blue-600"
+            >
+                Currículum
+            </a>
+
+            <a
+                href="#contacto"
+                class="transition hover:text-blue-600"
+            >
+                Contacto
+            </a>
+            </div>
+
+            <div class="site-controls" aria-label="Preferencias del sitio">
+                <button type="button" id="theme-toggle" class="site-control" aria-label="Activar modo oscuro" title="Modo oscuro">
+                    <svg class="control-icon icon-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2M12 20v2M4.93 4.93l1.42 1.42M17.65 17.65l1.42 1.42M2 12h2M20 12h2M4.93 19.07l1.42-1.42M17.65 6.35l1.42-1.42"></path></svg>
+                    <svg class="control-icon icon-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12.8A8.5 8.5 0 1 1 11.2 3 6.7 6.7 0 0 0 21 12.8Z"></path></svg>
+                    <span class="control-label theme-label">Oscuro</span>
+                </button>
+
+                <div class="language-picker">
+                    <button
+                        type="button"
+                        id="language-button"
+                        class="language-control"
+                        aria-haspopup="listbox"
+                        aria-expanded="false"
+                        aria-label="Seleccionar idioma"
+                    >
+                        <svg class="control-icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><path d="M3 12h18M12 3c2.3 2.5 3.5 5.5 3.5 9S14.3 18.5 12 21c-2.3-2.5-3.5-5.5-3.5-9S9.7 5.5 12 3Z"></path></svg>
+                        <span class="language-label">Idioma</span>
+                        <span id="language-current" class="language-current">ES</span>
+                        <svg class="language-chevron" viewBox="0 0 24 24" aria-hidden="true"><path d="m7 10 5 5 5-5"></path></svg>
+                    </button>
+                    <div id="language-menu" class="language-menu" role="listbox" aria-label="Seleccionar idioma">
+                        <button type="button" class="language-option" role="option" aria-selected="true" data-lang="es">Español</button>
+                        <button type="button" class="language-option" role="option" aria-selected="false" data-lang="en">English</button>
+                    </div>
+                    <select id="language-select" class="language-native-select" tabindex="-1" aria-hidden="true">
+                        <option value="es">ES</option>
+                        <option value="en">EN</option>
+                    </select>
+                </div>
+            </div>
+
+        </div>
+
+    </nav>
+
+<!-- =====================================================
+         HERO
+         ===================================================== -->
+
+    <header
+        class="relative overflow-hidden bg-gradient-to-br from-slate-950 via-indigo-950 to-blue-700 text-white"
+    >
+
+        <!-- Decorative background -->
+
+        <div
+            class="pointer-events-none absolute -right-32 -top-32 h-96 w-96 rounded-full bg-cyan-400/10"
+        ></div>
+
+        <div
+            class="pointer-events-none absolute -bottom-40 -left-32 h-96 w-96 rounded-full bg-violet-500/10"
+        ></div>
+
+
+        <div
+            class="relative mx-auto grid max-w-6xl grid-cols-1 items-center gap-10 px-6 py-16 lg:grid-cols-[1.6fr_0.8fr]"
+        >
+
+            <!-- Hero content -->
+
+            <div>
+
+                <span
+                    class="mb-4 inline-block rounded-full border border-cyan-300/30 bg-cyan-400/10 px-3 py-1.5 text-xs font-bold tracking-wider text-cyan-200"
+                >
+                    QA TESTER JUNIOR
+                </span>
+
+
+                <h1
+                    class="text-4xl font-bold tracking-tight sm:text-5xl lg:text-6xl"
+                >
+                    Freddy Ramírez Rede
+                </h1>
+
+
+                <p
+                    class="mt-4 text-sm font-semibold text-indigo-200 sm:text-base"
+                >
+                    QA Manual · Pruebas Funcionales · API Testing · SQL · Jira
+                </p>
+
+
+                <p
+                    class="mt-5 max-w-2xl text-sm leading-7 text-blue-100 sm:text-base"
+                >
+                    QA Tester con experiencia práctica en pruebas
+                    funcionales web y móviles, diseño de casos de prueba,
+                    análisis de requisitos, API Testing, SQL y
+                    documentación de defectos.
+                </p>
+
+
+                <div class="qa-terminal" aria-label="Resumen de testing">
+                    <div class="qa-terminal-top">
+                        <span class="qa-dot"></span><span class="qa-dot"></span><span class="qa-dot"></span>
+                        <span class="qa-terminal-title">qa@freddy:~</span>
+                    </div>
+                    <div class="qa-terminal-body">
+                        <span class="qa-prompt">$</span> run <span class="qa-command">portfolio-tests</span>
+                        <span class="qa-line"><b>✓</b> Functional testing <i>PASS</i></span>
+                        <span class="qa-line"><b>✓</b> API testing <i>PASS</i></span>
+                        <span class="qa-line"><b>✓</b> SQL validation <i>PASS</i></span>
+                        <span class="qa-line"><b>✓</b> Bug reporting <i>READY</i></span>
+                    </div>
+                </div>
+
+
+            </div>
+
+
+                <div class="hero-socials mt-7 flex flex-wrap gap-3">
+
+                    <a
+                        href="https://www.linkedin.com/in/freddy-ram%C3%ADrez-rede-8b4778283"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        data-icon="linkedin" class="hero-social-link itshover-social rounded-lg bg-gradient-to-r from-blue-500 to-indigo-500 px-5 py-2.5 text-sm font-bold text-white shadow-lg shadow-blue-900/30 transition hover:-translate-y-0.5 hover:shadow-xl"
+                    >
+                        <svg class="social-icon itshover-icon" viewBox="0 0 24 24" aria-hidden="true">
+                            <path fill="currentColor" d="M20.45 20.45h-3.56v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.34V8.99h3.42v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.61 0 4.27 2.37 4.27 5.46v6.29ZM5.32 7.43a2.07 2.07 0 1 1 0-4.14 2.07 2.07 0 0 1 0 4.14ZM3.54 20.45H7.1V8.99H3.54v11.46ZM22.23 0H1.77C.79 0 0 .77 0 1.72v20.56C0 23.23.79 24 1.77 24h20.46c.98 0 1.77-.77 1.77-1.72V1.72C24 .77 23.21 0 22.23 0Z"/>
+                        </svg>
+                        <span>LinkedIn</span>
+                    </a>
+
+
+                    <a
+                        href="https://github.com/yizzitt"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        data-icon="github" class="hero-social-link itshover-social rounded-lg border border-white/20 bg-white/10 px-5 py-2.5 text-sm font-bold text-white backdrop-blur transition hover:bg-white/15"
+                    >
+                        <svg class="social-icon itshover-icon" viewBox="0 0 24 24" aria-hidden="true">
+                            <path fill="currentColor" d="M12 .5A11.5 11.5 0 0 0 8.36 22.9c.58.11.79-.25.79-.56v-2.18c-3.22.7-3.9-1.37-3.9-1.37-.53-1.34-1.29-1.7-1.29-1.7-1.05-.72.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.69 1.26 3.35.96.1-.75.4-1.26.73-1.55-2.57-.29-5.27-1.29-5.27-5.75 0-1.27.45-2.3 1.19-3.11-.12-.29-.52-1.47.11-3.07 0 0 .97-.31 3.17 1.19a10.95 10.95 0 0 1 5.76 0c2.2-1.5 3.17-1.19 3.17-1.19.63 1.6.23 2.78.11 3.07.74.81 1.19 1.84 1.19 3.11 0 4.47-2.71 5.45-5.29 5.74.41.35.78 1.04.78 2.1v3.12c0 .31.21.68.8.56A11.5 11.5 0 0 0 12 .5Z"/>
+                        </svg>
+                        <span>GitHub</span>
+                    </a>
+
+                </div>
+
+
+                        <!-- Hero focus card -->
+
+            <aside
+                class="rounded-2xl border border-white/10 bg-white/10 p-6 shadow-2xl shadow-slate-950/20 backdrop-blur-md"
+            >
+
+                <div class="hero-status"><span></span> AVAILABLE FOR QA OPPORTUNITIES</div>
+
+                <p
+                    class="mb-4 text-xs font-extrabold tracking-widest text-cyan-200"
+                >
+                    ENFOQUE
+                </p>
+
+
+                <ul class="space-y-1">
+
+                    <li
+                        class="flex items-center gap-3 border-b border-white/10 py-3 text-sm text-slate-100"
+                    >
+                        <span class="font-bold text-cyan-300">✓</span>
+                        Manual Testing
+                    </li>
+
+                    <li
+                        class="flex items-center gap-3 border-b border-white/10 py-3 text-sm text-slate-100"
+                    >
+                        <span class="font-bold text-cyan-300">✓</span>
+                        API Testing
+                    </li>
+
+                    <li
+                        class="flex items-center gap-3 border-b border-white/10 py-3 text-sm text-slate-100"
+                    >
+                        <span class="font-bold text-cyan-300">✓</span>
+                        SQL & Data Validation
+                    </li>
+
+                    <li
+                        class="flex items-center gap-3 border-b border-white/10 py-3 text-sm text-slate-100"
+                    >
+                        <span class="font-bold text-cyan-300">✓</span>
+                        Mobile Testing
+                    </li>
+
+                    <li
+                        class="flex items-center gap-3 py-3 text-sm text-slate-100"
+                    >
+                        <span class="font-bold text-cyan-300">✓</span>
+                        Test Design
+                    </li>
+
+                </ul>
+
+            </aside>
+
+        </div>
+
+    </header>
+
+
+
+
+
+    <!-- =====================================================
+         MAIN
+         ===================================================== -->
+
+    <main class="mx-auto max-w-6xl px-6 pb-20">
+
+
+        <!-- =====================================================
+             SOBRE MÍ
+             ===================================================== -->
+
+        <section
+            id="sobre-mi"
+            class="border-b border-slate-200 py-14"
+        >
+
+            <div class="mb-7">
+
+                <h2
+                    class="text-2xl font-bold tracking-tight text-slate-900"
+                >
+                    🧑‍💻 Sobre mí
+                </h2>
+
+                <div
+                    class="mt-2 h-1 w-10 rounded-full bg-gradient-to-r from-blue-600 to-violet-500"
+                ></div>
+
+            </div>
+
+
+            <div class="max-w-4xl space-y-4 text-sm leading-7 text-slate-600 sm:text-base">
+
+                <p>
+                    Soy QA Tester Manual con formación especializada en
+                    Quality Assurance y experiencia práctica en pruebas
+                    funcionales web y móviles, diseño y ejecución de casos
+                    de prueba, análisis de requisitos, API Testing y
+                    documentación de defectos en Jira.
+                </p>
+
+
+                <p>
+                    También cuento con conocimientos en bases de datos
+                    y SQL para consulta y validación de información,
+                    además de experiencia con Postman, REST, HTTP, JSON,
+                    Android Studio, Termius, Cygwin, GitHub y Figma.
+                </p>
+
+
+                <p>
+                    Actualmente continúo desarrollando mis conocimientos
+                    hacia QA Automation y Python.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             HABILIDADES
+             ===================================================== -->
+
+        <section
+            id="habilidades"
+            class="border-b border-slate-200 py-14"
+        >
+
+            <div class="mb-7">
+
+                <h2
+                    class="text-2xl font-bold tracking-tight text-slate-900"
+                >
+                    🛠️ Habilidades
+                </h2>
+
+                <div
+                    class="mt-2 h-1 w-10 rounded-full bg-gradient-to-r from-blue-600 to-violet-500"
+                ></div>
+
+            </div>
+
+
+            <div class="divide-y divide-slate-200 border-y border-slate-200">
+
+
+                <!-- Testing -->
+
+                <div
+                    class="grid gap-4 py-6 lg:grid-cols-[180px_1fr] lg:gap-8"
+                >
+
+                    <h3
+                        class="font-bold text-blue-600"
+                    >
+                        Testing
+                    </h3>
+
+                    <div class="flex flex-wrap gap-2">
+
+                        <span class="rounded-full border border-blue-100 bg-blue-50 px-3 py-1.5 text-xs font-medium text-blue-700">
+                            Pruebas funcionales
+                        </span>
+
+                        <span class="rounded-full border border-blue-100 bg-blue-50 px-3 py-1.5 text-xs font-medium text-blue-700">
+                            Pruebas no funcionales
+                        </span>
+
+                        <span class="rounded-full border border-blue-100 bg-blue-50 px-3 py-1.5 text-xs font-medium text-blue-700">
+                            Pruebas web
+                        </span>
+
+                        <span class="rounded-full border border-blue-100 bg-blue-50 px-3 py-1.5 text-xs font-medium text-blue-700">
+                            Pruebas móviles
+                        </span>
+
+                        <span class="rounded-full border border-blue-100 bg-blue-50 px-3 py-1.5 text-xs font-medium text-blue-700">
+                            API / REST
+                        </span>
+
+                        <span class="rounded-full border border-blue-100 bg-blue-50 px-3 py-1.5 text-xs font-medium text-blue-700">
+                            Pruebas positivas
+                        </span>
+
+                        <span class="rounded-full border border-blue-100 bg-blue-50 px-3 py-1.5 text-xs font-medium text-blue-700">
+                            Pruebas negativas
+                        </span>
+
+                        <span class="rounded-full border border-blue-100 bg-blue-50 px-3 py-1.5 text-xs font-medium text-blue-700">
+                            Casos de prueba
+                        </span>
+
+                        <span class="rounded-full border border-blue-100 bg-blue-50 px-3 py-1.5 text-xs font-medium text-blue-700">
+                            Bug Reporting
+                        </span>
+
+                        <span class="rounded-full border border-blue-100 bg-blue-50 px-3 py-1.5 text-xs font-medium text-blue-700">
+                            Compatibilidad
+                        </span>
+
+                        <span class="rounded-full border border-blue-100 bg-blue-50 px-3 py-1.5 text-xs font-medium text-blue-700">
+                            Interrupciones
+                        </span>
+
+                        <span class="rounded-full border border-blue-100 bg-blue-50 px-3 py-1.5 text-xs font-medium text-blue-700">
+                            Orientación
+                        </span>
+
+                        <span class="rounded-full border border-blue-100 bg-blue-50 px-3 py-1.5 text-xs font-medium text-blue-700">
+                            Conectividad
+                        </span>
+
+                        <span class="rounded-full border border-blue-100 bg-blue-50 px-3 py-1.5 text-xs font-medium text-blue-700">
+                            Permisos
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Diseño de pruebas -->
+
+                <div
+                    class="grid gap-4 py-6 lg:grid-cols-[180px_1fr] lg:gap-8"
+                >
+
+                    <h3
+                        class="font-bold text-violet-600"
+                    >
+                        Diseño de pruebas
+                    </h3>
+
+                    <div class="flex flex-wrap gap-2">
+
+                        <span class="rounded-full border border-violet-100 bg-violet-50 px-3 py-1.5 text-xs font-medium text-violet-700">
+                            Análisis de requisitos
+                        </span>
+
+                        <span class="rounded-full border border-violet-100 bg-violet-50 px-3 py-1.5 text-xs font-medium text-violet-700">
+                            Clases de equivalencia
+                        </span>
+
+                        <span class="rounded-full border border-violet-100 bg-violet-50 px-3 py-1.5 text-xs font-medium text-violet-700">
+                            Valores límite
+                        </span>
+
+                        <span class="rounded-full border border-violet-100 bg-violet-50 px-3 py-1.5 text-xs font-medium text-violet-700">
+                            Descomposición atómica
+                        </span>
+
+                        <span class="rounded-full border border-violet-100 bg-violet-50 px-3 py-1.5 text-xs font-medium text-violet-700">
+                            Escenarios de prueba
+                        </span>
+
+                        <span class="rounded-full border border-violet-100 bg-violet-50 px-3 py-1.5 text-xs font-medium text-violet-700">
+                            Mapas mentales
+                        </span>
+
+                        <span class="rounded-full border border-violet-100 bg-violet-50 px-3 py-1.5 text-xs font-medium text-violet-700">
+                            Diagramas de flujo
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Metodologías -->
+
+                <div
+                    class="grid gap-4 py-6 lg:grid-cols-[180px_1fr] lg:gap-8"
+                >
+
+                    <h3
+                        class="font-bold text-cyan-700"
+                    >
+                        Metodologías
+                    </h3>
+
+                    <div class="flex flex-wrap gap-2">
+
+                        <span class="rounded-full border border-cyan-100 bg-cyan-50 px-3 py-1.5 text-xs font-medium text-cyan-700">
+                            Agile
+                        </span>
+
+                        <span class="rounded-full border border-cyan-100 bg-cyan-50 px-3 py-1.5 text-xs font-medium text-cyan-700">
+                            Scrum
+                        </span>
+
+                        <span class="rounded-full border border-cyan-100 bg-cyan-50 px-3 py-1.5 text-xs font-medium text-cyan-700">
+                            STLC
+                        </span>
+
+                        <span class="rounded-full border border-cyan-100 bg-cyan-50 px-3 py-1.5 text-xs font-medium text-cyan-700">
+                            Sprints
+                        </span>
+
+                        <span class="rounded-full border border-cyan-100 bg-cyan-50 px-3 py-1.5 text-xs font-medium text-cyan-700">
+                            Priorización
+                        </span>
+
+                        <span class="rounded-full border border-cyan-100 bg-cyan-50 px-3 py-1.5 text-xs font-medium text-cyan-700">
+                            ISTQB Foundation
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Bases de datos -->
+
+                <div
+                    class="grid gap-4 py-6 lg:grid-cols-[180px_1fr] lg:gap-8"
+                >
+
+                    <h3
+                        class="font-bold text-emerald-700"
+                    >
+                        Bases de datos
+                    </h3>
+
+                    <div class="flex flex-wrap gap-2">
+
+                        <span class="rounded-full border border-emerald-100 bg-emerald-50 px-3 py-1.5 text-xs font-medium text-emerald-700">
+                            SQL
+                        </span>
+
+                        <span class="rounded-full border border-emerald-100 bg-emerald-50 px-3 py-1.5 text-xs font-medium text-emerald-700">
+                            SELECT
+                        </span>
+
+                        <span class="rounded-full border border-emerald-100 bg-emerald-50 px-3 py-1.5 text-xs font-medium text-emerald-700">
+                            WHERE
+                        </span>
+
+                        <span class="rounded-full border border-emerald-100 bg-emerald-50 px-3 py-1.5 text-xs font-medium text-emerald-700">
+                            JOIN
+                        </span>
+
+                        <span class="rounded-full border border-emerald-100 bg-emerald-50 px-3 py-1.5 text-xs font-medium text-emerald-700">
+                            GROUP BY
+                        </span>
+
+                        <span class="rounded-full border border-emerald-100 bg-emerald-50 px-3 py-1.5 text-xs font-medium text-emerald-700">
+                            HAVING
+                        </span>
+
+                        <span class="rounded-full border border-emerald-100 bg-emerald-50 px-3 py-1.5 text-xs font-medium text-emerald-700">
+                            CASE
+                        </span>
+
+                        <span class="rounded-full border border-emerald-100 bg-emerald-50 px-3 py-1.5 text-xs font-medium text-emerald-700">
+                            Validación de datos
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Herramientas -->
+
+                <div
+                    class="grid gap-4 py-6 lg:grid-cols-[180px_1fr] lg:gap-8"
+                >
+
+                    <h3
+                        class="font-bold text-pink-600"
+                    >
+                        Herramientas
+                    </h3>
+
+                    <div class="flex flex-wrap gap-2">
+
+                        <span class="rounded-full border border-pink-100 bg-pink-50 px-3 py-1.5 text-xs font-medium text-pink-700">
+                            Postman
+                        </span>
+
+                        <span class="rounded-full border border-pink-100 bg-pink-50 px-3 py-1.5 text-xs font-medium text-pink-700">
+                            Jira
+                        </span>
+
+                        <span class="rounded-full border border-pink-100 bg-pink-50 px-3 py-1.5 text-xs font-medium text-pink-700">
+                            GitHub
+                        </span>
+
+                        <span class="rounded-full border border-pink-100 bg-pink-50 px-3 py-1.5 text-xs font-medium text-pink-700">
+                            Android Studio
+                        </span>
+
+                        <span class="rounded-full border border-pink-100 bg-pink-50 px-3 py-1.5 text-xs font-medium text-pink-700">
+                            Termius
+                        </span>
+
+                        <span class="rounded-full border border-pink-100 bg-pink-50 px-3 py-1.5 text-xs font-medium text-pink-700">
+                            Cygwin
+                        </span>
+
+                        <span class="rounded-full border border-pink-100 bg-pink-50 px-3 py-1.5 text-xs font-medium text-pink-700">
+                            Google Sheets
+                        </span>
+
+                        <span class="rounded-full border border-pink-100 bg-pink-50 px-3 py-1.5 text-xs font-medium text-pink-700">
+                            Google Docs
+                        </span>
+
+                        <span class="rounded-full border border-pink-100 bg-pink-50 px-3 py-1.5 text-xs font-medium text-pink-700">
+                            Figma
+                        </span>
+
+                        <span class="rounded-full border border-pink-100 bg-pink-50 px-3 py-1.5 text-xs font-medium text-pink-700">
+                            Adobe Illustrator
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Web / Frontend -->
+
+                <div
+                    class="grid gap-4 py-6 lg:grid-cols-[180px_1fr] lg:gap-8"
+                >
+
+                    <h3 class="font-bold text-fuchsia-700">
+                        Web / Frontend
+                    </h3>
+
+                    <div class="flex flex-wrap gap-2 skill-pills">
+
+                        <span class="rounded-full border border-fuchsia-100 bg-fuchsia-50 px-3 py-1.5 text-xs font-medium text-fuchsia-700">HTML</span>
+                        <span class="rounded-full border border-fuchsia-100 bg-fuchsia-50 px-3 py-1.5 text-xs font-medium text-fuchsia-700">CSS</span>
+                        <span class="rounded-full border border-fuchsia-100 bg-fuchsia-50 px-3 py-1.5 text-xs font-medium text-fuchsia-700">JavaScript</span>
+                        <span class="rounded-full border border-fuchsia-100 bg-fuchsia-50 px-3 py-1.5 text-xs font-medium text-fuchsia-700">Vite</span>
+                        <span class="rounded-full border border-fuchsia-100 bg-fuchsia-50 px-3 py-1.5 text-xs font-medium text-fuchsia-700">Responsive Design</span>
+                        <span class="rounded-full border border-fuchsia-100 bg-fuchsia-50 px-3 py-1.5 text-xs font-medium text-fuchsia-700">Dark / Light Mode</span>
+                        <span class="rounded-full border border-fuchsia-100 bg-fuchsia-50 px-3 py-1.5 text-xs font-medium text-fuchsia-700">ES / EN Localization</span>
+                        <span class="rounded-full border border-fuchsia-100 bg-fuchsia-50 px-3 py-1.5 text-xs font-medium text-fuchsia-700">LocalStorage</span>
+                        <span class="rounded-full border border-fuchsia-100 bg-fuchsia-50 px-3 py-1.5 text-xs font-medium text-fuchsia-700">SVG Animations</span>
+                        <span class="rounded-full border border-fuchsia-100 bg-fuchsia-50 px-3 py-1.5 text-xs font-medium text-fuchsia-700">GitHub Pages</span>
+                        <span class="rounded-full border border-fuchsia-100 bg-fuchsia-50 px-3 py-1.5 text-xs font-medium text-fuchsia-700">GitHub Actions</span>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Tecnologías -->
+
+                <div
+                    class="grid gap-4 py-6 lg:grid-cols-[180px_1fr] lg:gap-8"
+                >
+
+                    <h3
+                        class="font-bold text-amber-600"
+                    >
+                        Tecnologías
+                    </h3>
+
+                    <div class="flex flex-wrap gap-2">
+
+                        <span class="rounded-full border border-amber-100 bg-amber-50 px-3 py-1.5 text-xs font-medium text-amber-700">
+                            REST
+                        </span>
+
+                        <span class="rounded-full border border-amber-100 bg-amber-50 px-3 py-1.5 text-xs font-medium text-amber-700">
+                            HTTP
+                        </span>
+
+                        <span class="rounded-full border border-amber-100 bg-amber-50 px-3 py-1.5 text-xs font-medium text-amber-700">
+                            JSON
+                        </span>
+
+                        <span class="rounded-full border border-amber-100 bg-amber-50 px-3 py-1.5 text-xs font-medium text-amber-700">
+                            Python
+                        </span>
+
+                        <span class="rounded-full border border-amber-100 bg-amber-50 px-3 py-1.5 text-xs font-medium text-amber-700">
+                            Git
+                        </span>
+
+                        <span class="rounded-full border border-amber-100 bg-amber-50 px-3 py-1.5 text-xs font-medium text-amber-700">
+                            Windows
+                        </span>
+
+                        <span class="rounded-full border border-amber-100 bg-amber-50 px-3 py-1.5 text-xs font-medium text-amber-700">
+                            macOS
+                        </span>
+
+                        <span class="rounded-full border border-amber-100 bg-amber-50 px-3 py-1.5 text-xs font-medium text-amber-700">
+                            Linux
+                        </span>
+
+                        <span class="rounded-full border border-amber-100 bg-amber-50 px-3 py-1.5 text-xs font-medium text-amber-700">
+                            iOS
+                        </span>
+
+                        <span class="rounded-full border border-amber-100 bg-amber-50 px-3 py-1.5 text-xs font-medium text-amber-700">
+                            Android
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             PROYECTOS
+             ===================================================== -->
+
+        <section
+            id="proyectos"
+            class="border-b border-slate-200 py-14"
+        >
+
+            <div class="mb-7">
+
+                <h2
+                    class="text-2xl font-bold tracking-tight text-slate-900"
+                >
+                    🚀 Proyectos
+                </h2>
+
+                <div
+                    class="mt-2 h-1 w-10 rounded-full bg-gradient-to-r from-blue-600 to-violet-500"
+                ></div>
+
+            </div>
+
+
+            <div class="space-y-5">
+
+
+                <!-- =================================================
+                     PROJECT 01
+                     ================================================= -->
+
+                <article
+                    class="grid gap-5 rounded-xl border border-blue-100 border-l-4 border-l-blue-600 bg-gradient-to-br from-blue-50 to-white p-6 shadow-sm transition hover:-translate-y-0.5 hover:shadow-lg sm:grid-cols-[38px_1fr]"
+                >
+
+                    <div
+                        class="pt-1 text-xs font-extrabold text-blue-600"
+                    >
+                        01
+                    </div>
+
+
+                    <div>
+
+                        <p
+                            class="mb-1 text-xs font-extrabold tracking-wider text-blue-600"
+                        >
+                            MOBILE TESTING
+                        </p>
+
+
+                        <h3
+                            class="mb-3 text-xl font-bold text-slate-900"
+                        >
+                            Urban.Lunch — Pruebas funcionales móviles
+                        </h3>
+
+
+                        <p class="mb-2 text-sm leading-7 text-slate-600">
+                            <strong>Problema:</strong>
+                            Validar el flujo completo de una aplicación
+                            móvil de pedidos.
+                        </p>
+
+
+                        <p class="mb-2 text-sm leading-7 text-slate-600">
+                            <strong>Qué hice:</strong>
+                            Diseñé y ejecuté 86 casos de prueba mediante
+                            Android Studio en tres dispositivos Android
+                            con diferentes resoluciones. Realicé pruebas
+                            de llamadas entrantes, orientación, pérdida
+                            de conexión y permisos.
+                        </p>
+
+
+                        <p class="text-sm leading-7 text-slate-600">
+                            <strong>Resultado:</strong>
+                            Identifiqué y documenté 7 defectos relacionados
+                            con interfaz, conservación de información,
+                            tiempos de entrega, entrega de platillos y
+                            permisos.
+                        </p>
+
+
+                        <div
+                            class="mt-4 flex flex-wrap gap-2"
+                        >
+
+                            <span class="rounded-full bg-blue-100 px-3 py-1 text-xs font-medium text-blue-700">
+                                Android Studio
+                            </span>
+
+                            <span class="rounded-full bg-blue-100 px-3 py-1 text-xs font-medium text-blue-700">
+                                Jira
+                            </span>
+
+                            <span class="rounded-full bg-blue-100 px-3 py-1 text-xs font-medium text-blue-700">
+                                Mobile Testing
+                            </span>
+
+                            <span class="rounded-full bg-blue-100 px-3 py-1 text-xs font-medium text-blue-700">
+                                Compatibilidad
+                            </span>
+
+                            <span class="rounded-full bg-blue-100 px-3 py-1 text-xs font-medium text-blue-700">
+                                Interrupciones
+                            </span>
+
+                            <span class="rounded-full bg-blue-100 px-3 py-1 text-xs font-medium text-blue-700">
+                                Permisos
+                            </span>
+
+                        </div>
+
+
+                        <a
+                            href="https://docs.google.com/spreadsheets/d/12u60fR5qm8E33TXLW3LYZ-OETMWr-atjF1MJkziYHVE/edit?usp=sharing"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="mt-4 inline-block text-sm font-bold text-blue-600 hover:underline"
+                        >
+                            Ver proyecto Urban.Lunch Móvil →
+                        </a>
+
+                    </div>
+
+                </article>
+
+
+                <!-- =================================================
+                     PROJECT 02
+                     ================================================= -->
+
+                <article
+                    class="grid gap-5 rounded-xl border border-violet-100 border-l-4 border-l-violet-600 bg-gradient-to-br from-violet-50 to-white p-6 shadow-sm transition hover:-translate-y-0.5 hover:shadow-lg sm:grid-cols-[38px_1fr]"
+                >
+
+                    <div
+                        class="pt-1 text-xs font-extrabold text-violet-600"
+                    >
+                        02
+                    </div>
+
+
+                    <div>
+
+                        <p
+                            class="mb-1 text-xs font-extrabold tracking-wider text-violet-600"
+                        >
+                            API TESTING
+                        </p>
+
+
+                        <h3
+                            class="mb-3 text-xl font-bold text-slate-900"
+                        >
+                            Urban Routes — Pruebas de API REST
+                        </h3>
+
+
+                        <p class="mb-2 text-sm leading-7 text-slate-600">
+                            <strong>Problema:</strong>
+                            Validar el comportamiento de un endpoint REST
+                            mediante distintos escenarios de prueba.
+                        </p>
+
+
+                        <p class="mb-2 text-sm leading-7 text-slate-600">
+                            <strong>Qué hice:</strong>
+                            Diseñé y ejecuté casos para validar solicitudes
+                            POST, parámetros, cuerpos JSON, tipos de datos,
+                            límites, campos obligatorios y manejo de errores.
+                        </p>
+
+
+                        <p class="text-sm leading-7 text-slate-600">
+                            <strong>Resultado:</strong>
+                            Identifiqué y documenté defectos relacionados
+                            con validaciones incorrectas y respuestas
+                            inesperadas.
+                        </p>
+
+
+                        <div class="mt-4 flex flex-wrap gap-2">
+
+                            <span class="rounded-full bg-violet-100 px-3 py-1 text-xs font-medium text-violet-700">
+                                Postman
+                            </span>
+
+                            <span class="rounded-full bg-violet-100 px-3 py-1 text-xs font-medium text-violet-700">
+                                API Testing
+                            </span>
+
+                            <span class="rounded-full bg-violet-100 px-3 py-1 text-xs font-medium text-violet-700">
+                                REST
+                            </span>
+
+                            <span class="rounded-full bg-violet-100 px-3 py-1 text-xs font-medium text-violet-700">
+                                HTTP
+                            </span>
+
+                            <span class="rounded-full bg-violet-100 px-3 py-1 text-xs font-medium text-violet-700">
+                                JSON
+                            </span>
+
+                            <span class="rounded-full bg-violet-100 px-3 py-1 text-xs font-medium text-violet-700">
+                                Jira
+                            </span>
+
+                        </div>
+
+
+                        <a
+                            href="https://docs.google.com/spreadsheets/d/1-AapNYjTlC4CPWXquC4JqeetD6eGT8dkTpL8Zjiv4c4/edit?usp=sharing"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="mt-4 inline-block text-sm font-bold text-violet-600 hover:underline"
+                        >
+                            Ver proyecto Urban Routes API REST →
+                        </a>
+
+                    </div>
+
+                </article>
+
+
+                <!-- =================================================
+                     PROJECT 03
+                     ================================================= -->
+
+                <article
+                    class="grid gap-5 rounded-xl border border-cyan-100 border-l-4 border-l-cyan-600 bg-gradient-to-br from-cyan-50 to-white p-6 shadow-sm transition hover:-translate-y-0.5 hover:shadow-lg sm:grid-cols-[38px_1fr]"
+                >
+
+                    <div
+                        class="pt-1 text-xs font-extrabold text-cyan-600"
+                    >
+                        03
+                    </div>
+
+
+                    <div>
+
+                        <p
+                            class="mb-1 text-xs font-extrabold tracking-wider text-cyan-600"
+                        >
+                            FUNCTIONAL TESTING
+                        </p>
+
+
+                        <h3
+                            class="mb-3 text-xl font-bold text-slate-900"
+                        >
+                            Urban Routes — Pruebas funcionales web
+                        </h3>
+
+
+                        <p class="mb-2 text-sm leading-7 text-slate-600">
+                            <strong>Problema:</strong>
+                            Validar el flujo de reserva, método de pago,
+                            validaciones, precio, temporizador y cancelación.
+                        </p>
+
+
+                        <p class="text-sm leading-7 text-slate-600">
+                            <strong>Qué hice:</strong>
+                            Ejecuté pruebas funcionales en Chrome y Firefox,
+                            comparé la interfaz con Figma y documenté
+                            defectos en Jira.
+                        </p>
+
+
+                        <div class="mt-4 flex flex-wrap gap-2">
+
+                            <span class="rounded-full bg-cyan-100 px-3 py-1 text-xs font-medium text-cyan-700">
+                                Jira
+                            </span>
+
+                            <span class="rounded-full bg-cyan-100 px-3 py-1 text-xs font-medium text-cyan-700">
+                                Figma
+                            </span>
+
+                            <span class="rounded-full bg-cyan-100 px-3 py-1 text-xs font-medium text-cyan-700">
+                                Chrome
+                            </span>
+
+                            <span class="rounded-full bg-cyan-100 px-3 py-1 text-xs font-medium text-cyan-700">
+                                Firefox
+                            </span>
+
+                            <span class="rounded-full bg-cyan-100 px-3 py-1 text-xs font-medium text-cyan-700">
+                                DevTools
+                            </span>
+
+                        </div>
+
+
+                        <a
+                            href="https://docs.google.com/document/d/1lM0RRkGqqyTxYkXLqrxGQGM0Wu8F2jYW/edit?usp=sharing"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="mt-4 inline-block text-sm font-bold text-cyan-700 hover:underline"
+                        >
+                            Ver proyecto Urban Routes Web →
+                        </a>
+
+                    </div>
+
+                </article>
+
+
+                <!-- =================================================
+                     PROJECT 04
+                     ================================================= -->
+
+                <article
+                    class="grid gap-5 rounded-xl border border-emerald-100 border-l-4 border-l-emerald-600 bg-gradient-to-br from-emerald-50 to-white p-6 shadow-sm transition hover:-translate-y-0.5 hover:shadow-lg sm:grid-cols-[38px_1fr]"
+                >
+
+                    <div
+                        class="pt-1 text-xs font-extrabold text-emerald-600"
+                    >
+                        04
+                    </div>
+
+
+                    <div>
+
+                        <p
+                            class="mb-1 text-xs font-extrabold tracking-wider text-emerald-700"
+                        >
+                            TEST DESIGN
+                        </p>
+
+
+                        <h3
+                            class="mb-3 text-xl font-bold text-slate-900"
+                        >
+                            Urban Routes — Diseño de pruebas
+                        </h3>
+
+
+                        <p class="mb-2 text-sm leading-7 text-slate-600">
+                            <strong>Problema:</strong>
+                            Analizar requisitos y diseñar una estrategia
+                            de pruebas para diferentes datos y escenarios.
+                        </p>
+
+
+                        <p class="text-sm leading-7 text-slate-600">
+                            <strong>Qué hice:</strong>
+                            Trabajé con clases de equivalencia, valores
+                            límite, escenarios, descomposición atómica,
+                            mapas mentales y diagramas de flujo.
+                        </p>
+
+
+                        <div class="mt-4 flex flex-wrap gap-2">
+
+                            <span class="rounded-full bg-emerald-100 px-3 py-1 text-xs font-medium text-emerald-700">
+                                Equivalence Classes
+                            </span>
+
+                            <span class="rounded-full bg-emerald-100 px-3 py-1 text-xs font-medium text-emerald-700">
+                                Boundary Values
+                            </span>
+
+                            <span class="rounded-full bg-emerald-100 px-3 py-1 text-xs font-medium text-emerald-700">
+                                Requirements
+                            </span>
+
+                            <span class="rounded-full bg-emerald-100 px-3 py-1 text-xs font-medium text-emerald-700">
+                                Atomic Decomposition
+                            </span>
+
+                            <span class="rounded-full bg-emerald-100 px-3 py-1 text-xs font-medium text-emerald-700">
+                                Flowcharts
+                            </span>
+
+                        </div>
+
+
+                        <a
+                            href="https://docs.google.com/document/d/1M2Ao3J99xIZjXpjm5LLW6r6qtyEoWJg2/edit?usp=sharing"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="mt-4 inline-block text-sm font-bold text-emerald-700 hover:underline"
+                        >
+                            Ver proyecto Urban Routes Diseño de Pruebas →
+                        </a>
+
+                    </div>
+
+                </article>
+
+
+                <!-- =================================================
+                     PROJECT 05
+                     ================================================= -->
+
+                <article
+                    class="grid gap-5 rounded-xl border border-pink-100 border-l-4 border-l-pink-600 bg-gradient-to-br from-pink-50 to-white p-6 shadow-sm transition hover:-translate-y-0.5 hover:shadow-lg sm:grid-cols-[38px_1fr]"
+                >
+
+                    <div
+                        class="pt-1 text-xs font-extrabold text-pink-600"
+                    >
+                        05
+                    </div>
+
+
+                    <div>
+
+                        <p
+                            class="mb-1 text-xs font-extrabold tracking-wider text-pink-600"
+                        >
+                            FUNCTIONAL TESTING
+                        </p>
+
+
+                        <h3
+                            class="mb-3 text-xl font-bold text-slate-900"
+                        >
+                            Urban Routes — Pruebas funcionales del mapa
+                        </h3>
+
+
+                        <p class="mb-2 text-sm leading-7 text-slate-600">
+                            <strong>Qué hice:</strong>
+                            Diseñé y ejecuté 24 casos de prueba para validar
+                            navegación, zoom, búsqueda de direcciones,
+                            marcadores, objetos 3D, modos de visualización
+                            y Street View.
+                        </p>
+
+
+                        <p class="text-sm leading-7 text-slate-600">
+                            <strong>Resultado:</strong>
+                            Identifiqué y documenté 9 defectos con resultado
+                            esperado, resultado actual y severidad.
+                        </p>
+
+
+                        <div class="mt-4 flex flex-wrap gap-2">
+
+                            <span class="rounded-full bg-pink-100 px-3 py-1 text-xs font-medium text-pink-700">
+                                Functional Testing
+                            </span>
+
+                            <span class="rounded-full bg-pink-100 px-3 py-1 text-xs font-medium text-pink-700">
+                                Jira
+                            </span>
+
+                            <span class="rounded-full bg-pink-100 px-3 py-1 text-xs font-medium text-pink-700">
+                                Test Cases
+                            </span>
+
+                            <span class="rounded-full bg-pink-100 px-3 py-1 text-xs font-medium text-pink-700">
+                                Bug Reporting
+                            </span>
+
+                        </div>
+
+
+                        <a
+                            href="https://docs.google.com/spreadsheets/d/1dudp6q3yuWjrvYe3QiJzQj7yuVdo_s_5hfyq0Tfx-aU/edit?usp=sharing"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="mt-4 inline-block text-sm font-bold text-pink-600 hover:underline"
+                        >
+                            Ver proyecto Urban Routes Mapa →
+                        </a>
+
+                    </div>
+
+                </article>
+
+
+                <!-- =================================================
+                     PROJECT 06 SQL
+                     ================================================= -->
+
+                <article
+                    class="grid gap-5 rounded-xl border border-amber-200 border-l-4 border-l-amber-600 bg-gradient-to-br from-amber-50 to-white p-6 shadow-sm transition hover:-translate-y-0.5 hover:shadow-lg sm:grid-cols-[38px_1fr]"
+                >
+
+                    <div
+                        class="pt-1 text-xs font-extrabold text-amber-600"
+                    >
+                        06
+                    </div>
+
+
+                    <div>
+
+                        <p
+                            class="mb-1 text-xs font-extrabold tracking-wider text-amber-700"
+                        >
+                            SQL · DATABASE TESTING
+                        </p>
+
+
+                        <h3
+                            class="mb-3 text-xl font-bold text-slate-900"
+                        >
+                            Chicago Taxi — SQL y análisis de datos
+                        </h3>
+
+
+                        <p class="mb-2 text-sm leading-7 text-slate-600">
+                            <strong>Problema:</strong>
+                            Consultar y analizar información de una base
+                            de datos relacionada con servicios de taxi.
+                        </p>
+
+
+                        <p class="mb-2 text-sm leading-7 text-slate-600">
+                            <strong>Qué hice:</strong>
+                            Realicé consultas utilizando SELECT, COUNT,
+                            GROUP BY, HAVING, CASE, filtros por fechas
+                            e INNER JOIN para analizar automóviles,
+                            compañías, condiciones climáticas y viajes.
+                        </p>
+
+
+                        <p class="text-sm leading-7 text-slate-600">
+                            <strong>Resultado:</strong>
+                            Validé los resultados de los diferentes
+                            ejercicios del proyecto, incluyendo el
+                            conteo documentado de 5,529 automóviles.
+                        </p>
+
+
+                        <div class="mt-4 flex flex-wrap gap-2">
+
+                            <span class="rounded-full bg-amber-100 px-3 py-1 text-xs font-medium text-amber-700">
+                                SQL
+                            </span>
+
+                            <span class="rounded-full bg-amber-100 px-3 py-1 text-xs font-medium text-amber-700">
+                                SELECT
+                            </span>
+
+                            <span class="rounded-full bg-amber-100 px-3 py-1 text-xs font-medium text-amber-700">
+                                COUNT
+                            </span>
+
+                            <span class="rounded-full bg-amber-100 px-3 py-1 text-xs font-medium text-amber-700">
+                                GROUP BY
+                            </span>
+
+                            <span class="rounded-full bg-amber-100 px-3 py-1 text-xs font-medium text-amber-700">
+                                HAVING
+                            </span>
+
+                            <span class="rounded-full bg-amber-100 px-3 py-1 text-xs font-medium text-amber-700">
+                                CASE
+                            </span>
+
+                            <span class="rounded-full bg-amber-100 px-3 py-1 text-xs font-medium text-amber-700">
+                                INNER JOIN
+                            </span>
+
+                            <span class="rounded-full bg-amber-100 px-3 py-1 text-xs font-medium text-amber-700">
+                                Filtros por fecha
+                            </span>
+
+                        </div>
+
+
+                        <a
+                            href="https://docs.google.com/document/d/1lbd0Kz_7DQMdLgl1pGJOFppTj_UVxfip/edit?usp=sharing&ouid=108860008182683406363&rtpof=true&sd=true"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="mt-4 inline-block text-sm font-bold text-amber-700 hover:underline"
+                        >
+                            Ver proyecto SQL →
+                        </a>
+
+                    </div>
+
+                </article>
+
+
+                <!-- =================================================
+                     PROJECT 07 PYTHON
+                     ================================================= -->
+
+                <article
+                    class="grid gap-5 rounded-xl border border-indigo-100 border-l-4 border-l-indigo-600 bg-gradient-to-br from-indigo-50 to-white p-6 shadow-sm transition hover:-translate-y-0.5 hover:shadow-lg sm:grid-cols-[38px_1fr]"
+                >
+
+                    <div
+                        class="pt-1 text-xs font-extrabold text-indigo-600"
+                    >
+                        07
+                    </div>
+
+
+                    <div>
+
+                        <p
+                            class="mb-1 text-xs font-extrabold tracking-wider text-indigo-600"
+                        >
+                            EN CURSO · QA AUTOMATION
+                        </p>
+
+
+                        <h3
+                            class="mb-3 text-xl font-bold text-slate-900"
+                        >
+                            Automatización de pruebas con Python
+                        </h3>
+
+
+                        <p class="mb-2 text-sm leading-7 text-slate-600">
+                            Proyecto en desarrollo enfocado en aprender
+                            y aplicar Python para la automatización de
+                            pruebas dentro del área de Quality Assurance.
+                        </p>
+
+
+                        <p class="text-sm leading-7 text-slate-600">
+                            <strong>Objetivo:</strong>
+                            Desarrollar conocimientos prácticos de
+                            programación y automatización de pruebas
+                            para complementar mi experiencia en QA Manual.
+                        </p>
+
+
+                        <div class="mt-4 flex flex-wrap gap-2">
+
+                            <span class="rounded-full bg-indigo-100 px-3 py-1 text-xs font-medium text-indigo-700">
+                                Python
+                            </span>
+
+                            <span class="rounded-full bg-indigo-100 px-3 py-1 text-xs font-medium text-indigo-700">
+                                QA Automation
+                            </span>
+
+                            <span class="rounded-full bg-indigo-100 px-3 py-1 text-xs font-medium text-indigo-700">
+                                Automated Testing
+                            </span>
+
+                            <span class="rounded-full bg-indigo-100 px-3 py-1 text-xs font-medium text-indigo-700">
+                                Testing
+                            </span>
+
+                        </div>
+
+
+                        <span
+                            class="mt-4 inline-block text-sm font-extrabold text-indigo-600"
+                        >
+                            🚧 Proyecto en desarrollo
+                        </span>
+
+                    </div>
+
+                </article>
+
+
+
+                <!-- =================================================
+                     PROJECT 08 PORTFOLIO WEBSITE
+                     ================================================= -->
+
+                <article
+                    class="grid gap-5 rounded-xl border border-fuchsia-100 border-l-4 border-l-fuchsia-600 bg-gradient-to-br from-fuchsia-50 to-white p-6 shadow-sm transition hover:-translate-y-0.5 hover:shadow-lg sm:grid-cols-[38px_1fr]"
+                >
+
+                    <div class="pt-1 text-xs font-extrabold text-fuchsia-600">08</div>
+
+                    <div>
+
+                        <p class="mb-1 text-xs font-extrabold tracking-wider text-fuchsia-600">
+                            WEB / FRONT-END
+                        </p>
+
+                        <h3 class="mb-3 text-xl font-bold text-slate-900">
+                            Portafolio QA Web
+                        </h3>
+
+                        <p class="mb-2 text-sm leading-7 text-slate-600">
+                            <strong>Problema:</strong> Crear una plataforma personal para mostrar proyectos, habilidades y experiencia de QA de forma profesional y accesible.
+                        </p>
+
+                        <p class="mb-2 text-sm leading-7 text-slate-600">
+                            <strong>Qué hice:</strong> Desarrollé y mejoré el sitio con HTML, CSS, JavaScript y Vite. Implementé diseño responsive, modo oscuro / claro, traducción ES / EN, selector de idioma personalizado, preferencias con LocalStorage, navegación sticky, animaciones de scroll, iconos SVG animados y despliegue con GitHub Pages.
+                        </p>
+
+                        <p class="text-sm leading-7 text-slate-600">
+                            <strong>Resultado:</strong> Portfolio bilingüe con cambio de tema, navegación adaptable, currículum visualizable y descargable, y microinteracciones para los botones sociales.
+                        </p>
+
+                        <div class="mt-4 flex flex-wrap gap-2">
+                            <span class="rounded-full bg-fuchsia-100 px-3 py-1 text-xs font-medium text-fuchsia-700">HTML</span>
+                            <span class="rounded-full bg-fuchsia-100 px-3 py-1 text-xs font-medium text-fuchsia-700">CSS</span>
+                            <span class="rounded-full bg-fuchsia-100 px-3 py-1 text-xs font-medium text-fuchsia-700">JavaScript</span>
+                            <span class="rounded-full bg-fuchsia-100 px-3 py-1 text-xs font-medium text-fuchsia-700">Vite</span>
+                            <span class="rounded-full bg-fuchsia-100 px-3 py-1 text-xs font-medium text-fuchsia-700">Responsive Design</span>
+                            <span class="rounded-full bg-fuchsia-100 px-3 py-1 text-xs font-medium text-fuchsia-700">ES / EN</span>
+                            <span class="rounded-full bg-fuchsia-100 px-3 py-1 text-xs font-medium text-fuchsia-700">Dark / Light Mode</span>
+                            <span class="rounded-full bg-fuchsia-100 px-3 py-1 text-xs font-medium text-fuchsia-700">LocalStorage</span>
+                            <span class="rounded-full bg-fuchsia-100 px-3 py-1 text-xs font-medium text-fuchsia-700">SVG Animation</span>
+                            <span class="rounded-full bg-fuchsia-100 px-3 py-1 text-xs font-medium text-fuchsia-700">GitHub Pages</span>
+                        </div>
+
+                        <span
+                            class="mt-4 inline-block text-sm font-bold text-fuchsia-700"
+                            aria-label="Página actual"
+                        >
+                            Página actual
+                        </span>
+
+                    </div>
+
+                </article>
+
+
+        
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             EXPERIENCIA
+             ===================================================== -->
+
+        <section
+            id="experiencia"
+            class="border-b border-slate-200 py-14"
+        >
+
+            <div class="mb-7">
+
+                <h2
+                    class="text-2xl font-bold tracking-tight text-slate-900"
+                >
+                    💼 Experiencia
+                </h2>
+
+                <div
+                    class="mt-2 h-1 w-10 rounded-full bg-gradient-to-r from-blue-600 to-violet-500"
+                ></div>
+
+            </div>
+
+
+            <div class="divide-y divide-slate-200 border-y border-slate-200">
+
+
+                <article class="py-7">
+
+                    <div
+                        class="flex flex-col justify-between gap-2 sm:flex-row sm:items-center"
+                    >
+
+                        <h3
+                            class="text-lg font-bold text-slate-900"
+                        >
+                            Momentec Brands
+                        </h3>
+
+
+                        <span
+                            class="w-fit rounded-full bg-violet-50 px-3 py-1 text-xs font-bold text-violet-700"
+                        >
+                            2019 · 2026
+                        </span>
+
+                    </div>
+
+
+                    <p class="mt-2 text-sm text-slate-500">
+                        Empresa de diseño y producción de ropa deportiva.
+                    </p>
+
+
+                    <ul
+                        class="mt-4 list-disc space-y-2 pl-5 text-sm leading-6 text-slate-600"
+                    >
+
+                        <li>
+                            <strong>
+                                Jefe de Workflow · 2024–2026:
+                            </strong>
+                            liderazgo de asignación, priorización y
+                            seguimiento de tareas mediante Jira.
+                        </li>
+
+                        <li>
+                            <strong>
+                                Workflow · 2021–2024:
+                            </strong>
+                            gestión y distribución de tareas, estados,
+                            prioridades y fechas de entrega.
+                        </li>
+
+                        <li>
+                            <strong>
+                                Diseñador Gráfico · 2019–2021:
+                            </strong>
+                            diseño y revisión de gráficos mediante
+                            Adobe Illustrator.
+                        </li>
+
+                    </ul>
+
+                </article>
+
+
+                <article class="py-7">
+
+                    <div
+                        class="flex flex-col justify-between gap-2 sm:flex-row sm:items-center"
+                    >
+
+                        <h3
+                            class="text-lg font-bold text-slate-900"
+                        >
+                            GNP · Agente de Seguros
+                        </h3>
+
+
+                        <span
+                            class="w-fit rounded-full bg-violet-50 px-3 py-1 text-xs font-bold text-violet-700"
+                        >
+                            2026 · Actualidad
+                        </span>
+
+                    </div>
+
+
+                    <p
+                        class="mt-3 text-sm leading-6 text-slate-600"
+                    >
+                        Atención y seguimiento de clientes, gestión de
+                        solicitudes, documentación y comunicación profesional.
+                    </p>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             EDUCACIÓN
+             ===================================================== -->
+
+        <section
+            id="educacion"
+            class="border-b border-slate-200 py-14"
+        >
+
+            <div class="mb-7">
+
+                <h2
+                    class="text-2xl font-bold tracking-tight text-slate-900"
+                >
+                    📜 Educación
+                </h2>
+
+                <div
+                    class="mt-2 h-1 w-10 rounded-full bg-gradient-to-r from-blue-600 to-violet-500"
+                ></div>
+
+            </div>
+
+
+            <div class="divide-y divide-slate-200 border-y border-slate-200">
+
+                <div
+                    class="flex flex-col justify-between gap-1 py-5 sm:flex-row"
+                >
+
+                    <strong class="text-sm font-bold text-slate-700">
+                        TripleTen
+                    </strong>
+
+                    <span class="text-sm text-slate-500 sm:text-right">
+                        Bootcamp QA Engineer · 2026 · En curso
+                    </span>
+
+                </div>
+
+
+                <div
+                    class="flex flex-col justify-between gap-1 py-5 sm:flex-row"
+                >
+
+                    <strong class="text-sm font-bold text-slate-700">
+                        Universidad Politécnica de Yucatán
+                    </strong>
+
+                    <span class="text-sm text-slate-500 sm:text-right">
+                        Ingeniería Robótica Computacional
+                    </span>
+
+                </div>
+
+
+                <div
+                    class="flex flex-col justify-between gap-1 py-5 sm:flex-row"
+                >
+
+                    <strong class="text-sm font-bold text-slate-700">
+                        CBTis 120
+                    </strong>
+
+                    <span class="text-sm text-slate-500 sm:text-right">
+                        Técnico en Programación
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <p
+                class="mt-5 text-sm text-slate-500"
+            >
+
+                <strong class="text-slate-700">
+                    Idiomas:
+                </strong>
+
+                Español nativo · Inglés intermedio,
+                con mayor dominio escrito.
+
+            </p>
+
+        </section>
+
+
+        <!-- =====================================================
+             CURRÍCULUM
+             ===================================================== -->
+
+        <section
+            id="curriculum"
+            class="border-b border-slate-200 py-14"
+        >
+
+            <div class="mb-7">
+                <h2 class="text-2xl font-bold tracking-tight text-slate-900">
+                    📄 Currículum
+                </h2>
+                <div class="mt-2 h-1 w-10 rounded-full bg-gradient-to-r from-blue-600 to-violet-500"></div>
+            </div>
+
+            <div class="resume-card">
+
+                <div class="resume-toolbar">
+                    <div class="resume-copy">
+                        <p class="resume-title">Currículum profesional</p>
+                        <p class="resume-subtitle" id="resume-language-note">Versión en español</p>
+                    </div>
+
+                    <div class="resume-actions">
+
+                        <div class="resume-menu-group">
+                            <button type="button" id="resume-view-button" class="resume-button resume-button-secondary" aria-haspopup="true" aria-expanded="false">
+                                <span id="resume-view-label">Visualizar CV</span>
+                                <svg class="resume-chevron" viewBox="0 0 24 24" aria-hidden="true"><path d="m7 10 5 5 5-5"></path></svg>
+                            </button>
+                            <div id="resume-view-menu" class="resume-menu" role="menu">
+                                <a class="resume-menu-option" href="./cv/CV_Freddy_Ramirez_Rede_QA_ES.pdf" target="_blank" rel="noopener noreferrer" data-resume-lang="es" data-action="view" role="menuitem">Español</a>
+                                <a class="resume-menu-option" href="./cv/CV_Freddy_Ramirez_Rede_QA_EN.pdf" target="_blank" rel="noopener noreferrer" data-resume-lang="en" data-action="view" role="menuitem">English</a>
+                            </div>
+                        </div>
+
+                        <div class="resume-menu-group">
+                            <button type="button" id="resume-download-button" class="resume-button resume-button-primary" aria-haspopup="true" aria-expanded="false">
+                                <span id="resume-download-label">Descargar CV</span>
+                                <svg class="resume-chevron" viewBox="0 0 24 24" aria-hidden="true"><path d="m7 10 5 5 5-5"></path></svg>
+                            </button>
+                            <div id="resume-download-menu" class="resume-menu" role="menu">
+                                <a class="resume-menu-option" href="./cv/CV_Freddy_Ramirez_Rede_QA_ES.pdf" download="CV_Freddy_Ramirez_Rede_QA_ES.pdf" data-resume-lang="es" data-action="download" role="menuitem">Español</a>
+                                <a class="resume-menu-option" href="./cv/CV_Freddy_Ramirez_Rede_QA_EN.pdf" download="CV_Freddy_Ramirez_Rede_QA_EN.pdf" data-resume-lang="en" data-action="download" role="menuitem">English</a>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             CONTACTO
+             ===================================================== -->
+
+        <section
+            id="contacto"
+            class="py-14"
+        >
+
+            <div class="mb-7">
+
+                <h2
+                    class="text-2xl font-bold tracking-tight text-slate-900"
+                >
+                    📩 Contacto
+                </h2>
+
+                <div
+                    class="mt-2 h-1 w-10 rounded-full bg-gradient-to-r from-blue-600 to-violet-500"
+                ></div>
+
+            </div>
+
+
+            <div class="max-w-3xl">
+
+                <p
+                    class="font-bold text-blue-600"
+                >
+                    📍 Mérida, Yucatán, México
+                </p>
+
+
+                <p
+                    class="mt-2 text-sm leading-7 text-slate-600 sm:text-base"
+                >
+                    Estoy abierto a nuevas oportunidades laborales en el
+                    área de Quality Assurance, especialmente en posiciones
+                    de QA Tester, QA Manual y API Testing.
+                </p>
+
+
+                <div class="mt-6 flex flex-wrap gap-3">
+
+                    <a
+                        href="mailto:freddyrmzrede@gmail.com"
+                        data-icon="mail" class="contact-social-link itshover-social rounded-lg border border-blue-100 bg-gradient-to-r from-blue-50 to-violet-50 px-4 py-2.5 text-sm font-bold text-slate-700 transition hover:-translate-y-0.5 hover:border-blue-200 hover:text-blue-600 hover:shadow-sm"
+                    >
+                        <svg class="social-icon itshover-icon" viewBox="0 0 24 24" aria-hidden="true">
+                            <path fill="currentColor" d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2Zm0 4-8 5-8-5V6l8 5 8-5v2Z"/>
+                        </svg>
+                        <span>Email</span>
+                    </a>
+
+
+                    <a
+                        href="https://wa.me/529995064391"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        data-icon="whatsapp" class="contact-social-link itshover-social rounded-lg border border-green-100 bg-green-50 px-4 py-2.5 text-sm font-bold text-green-700 transition hover:-translate-y-0.5 hover:shadow-sm"
+                    >
+                        <svg class="social-icon itshover-icon" viewBox="0 0 24 24" aria-hidden="true">
+                            <path fill="currentColor" d="M12 2a9.9 9.9 0 0 0-8.56 14.87L2 22l5.27-1.38A10 10 0 1 0 12 2Zm0 18a8 8 0 0 1-4.07-1.11l-.29-.17-3.13.82.84-3.05-.19-.31A8 8 0 1 1 12 20Zm4.39-5.98c-.24-.12-1.42-.7-1.64-.78-.22-.08-.38-.12-.54.12-.16.24-.62.78-.76.94-.14.16-.28.18-.52.06-.24-.12-1.01-.37-1.92-1.18-.71-.63-1.19-1.41-1.33-1.65-.14-.24-.02-.37.1-.49.11-.11.24-.28.36-.42.12-.14.16-.24.24-.4.08-.16.04-.3-.02-.42-.06-.12-.54-1.31-.74-1.8-.19-.47-.39-.41-.54-.42h-.46c-.16 0-.42.06-.64.3-.22.24-.84.82-.84 2s.86 2.32.98 2.48c.12.16 1.68 2.57 4.07 3.6.57.25 1.02.4 1.37.51.58.18 1.11.15 1.53.09.47-.07 1.42-.58 1.62-1.13.2-.56.2-1.03.14-1.13-.06-.1-.22-.16-.46-.28Z"/>
+                        </svg>
+                        <span>WhatsApp</span>
+                    </a>
+
+
+                    <a
+                        href="https://www.linkedin.com/in/freddy-ram%C3%ADrez-rede-8b4778283"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        data-icon="linkedin" class="contact-social-link itshover-social rounded-lg border border-blue-100 bg-blue-50 px-4 py-2.5 text-sm font-bold text-blue-700 transition hover:-translate-y-0.5 hover:shadow-sm"
+                    >
+                        <svg class="social-icon itshover-icon" viewBox="0 0 24 24" aria-hidden="true">
+                            <path fill="currentColor" d="M20.45 20.45h-3.56v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.34V8.99h3.42v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.61 0 4.27 2.37 4.27 5.46v6.29ZM5.32 7.43a2.07 2.07 0 1 1 0-4.14 2.07 2.07 0 0 1 0 4.14ZM3.54 20.45H7.1V8.99H3.54v11.46ZM22.23 0H1.77C.79 0 0 .77 0 1.72v20.56C0 23.23.79 24 1.77 24h20.46c.98 0 1.77-.77 1.77-1.72V1.72C24 .77 23.21 0 22.23 0Z"/>
+                        </svg>
+                        <span>LinkedIn</span>
+                    </a>
+
+
+                    <a
+                        href="https://github.com/yizzitt"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        data-icon="github" class="contact-social-link itshover-social rounded-lg border border-slate-200 bg-slate-50 px-4 py-2.5 text-sm font-bold text-slate-700 transition hover:-translate-y-0.5 hover:shadow-sm"
+                    >
+                        <svg class="social-icon itshover-icon" viewBox="0 0 24 24" aria-hidden="true">
+                            <path fill="currentColor" d="M12 .5A11.5 11.5 0 0 0 8.36 22.9c.58.11.79-.25.79-.56v-2.18c-3.22.7-3.9-1.37-3.9-1.37-.53-1.34-1.29-1.7-1.29-1.7-1.05-.72.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.69 1.26 3.35.96.1-.75.4-1.26.73-1.55-2.57-.29-5.27-1.29-5.27-5.75 0-1.27.45-2.3 1.19-3.11-.12-.29-.52-1.47.11-3.07 0 0 .97-.31 3.17 1.19a10.95 10.95 0 0 1 5.76 0c2.2-1.5 3.17-1.19 3.17-1.19.63 1.6.23 2.78.11 3.07.74.81 1.19 1.84 1.19 3.11 0 4.47-2.71 5.45-5.29 5.74.41.35.78 1.04.78 2.1v3.12c0 .31.21.68.8.56A11.5 11.5 0 0 0 12 .5Z"/>
+                        </svg>
+                        <span>GitHub</span>
+                    </a>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- =====================================================
+         FOOTER
+         ===================================================== -->
+
+    <footer
+        class="border-t border-slate-200 bg-gradient-to-r from-slate-50 to-blue-50"
+    >
+
+        <div
+            class="mx-auto flex max-w-6xl flex-col justify-between gap-2 px-6 py-6 text-xs text-slate-500 sm:flex-row"
+        >
+
+            <span>
+                Freddy Ramírez Rede · QA Tester
+            </span>
+
+            <span>
+                © 2026
+            </span>
+
+        </div>
+
+    </footer>
+
+
+    <!-- =====================================================
+         VITE ENTRY
+         ===================================================== -->
+
+    <script
+        type="module"
+        src="/src/main-test.js"
+    ></script>
+
+</body>
+
+</html>
