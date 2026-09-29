@@ -3525,3 +3525,168 @@ body.dark .nav-brand {
     z-index: 1 !important;
   }
 }
+
+/* =====================================================
+   MOBILE NAVIGATION LAYOUT
+   On phones the navigation becomes a clean two-row bar:
+   logo + controls on row 1, scrollable section links on row 2.
+   This prevents the links from colliding with the theme/language controls.
+   ===================================================== */
+@media (max-width: 700px) {
+  nav.sticky > .nav-inner {
+    width: calc(100% - 20px) !important;
+    min-height: 0 !important;
+    display: grid !important;
+    grid-template-columns: auto minmax(0, 1fr) !important;
+    grid-template-rows: 58px 46px !important;
+    column-gap: 10px !important;
+    row-gap: 0 !important;
+    align-items: center !important;
+    padding: 0 !important;
+    overflow: visible !important;
+  }
+
+  .nav-brand {
+    grid-column: 1 !important;
+    grid-row: 1 !important;
+    width: 38px !important;
+    height: 38px !important;
+    margin: 0 !important;
+    justify-self: start !important;
+  }
+
+  .nav-brand img {
+    width: 30px !important;
+    height: 30px !important;
+  }
+
+  .site-controls {
+    grid-column: 2 !important;
+    grid-row: 1 !important;
+    width: auto !important;
+    min-width: 0 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    justify-self: end !important;
+    display: flex !important;
+    align-items: center !important;
+    gap: 7px !important;
+  }
+
+  .site-control,
+  .language-control {
+    min-height: 42px !important;
+    height: 42px !important;
+    padding: 8px 12px !important;
+    font-size: .86rem !important;
+  }
+
+  .site-control {
+    min-width: 42px !important;
+    width: 42px !important;
+    justify-content: center !important;
+  }
+
+  .site-control .control-icon {
+    width: 19px !important;
+    height: 19px !important;
+  }
+
+  .language-control {
+    min-width: 108px !important;
+    width: auto !important;
+    justify-content: center !important;
+    gap: 7px !important;
+  }
+
+  .language-control .control-icon {
+    width: 18px !important;
+    height: 18px !important;
+  }
+
+  .language-current {
+    min-width: 22px !important;
+  }
+
+  .language-label {
+    display: none !important;
+  }
+
+  .nav-links {
+    grid-column: 1 / -1 !important;
+    grid-row: 2 !important;
+    width: 100% !important;
+    min-width: 0 !important;
+    height: 46px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: flex-start !important;
+    gap: 24px !important;
+    overflow-x: auto !important;
+    overflow-y: hidden !important;
+    padding: 0 2px !important;
+    border-top: 1px solid var(--line) !important;
+    scrollbar-width: none !important;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .nav-links::-webkit-scrollbar {
+    display: none !important;
+  }
+
+  .nav-links a {
+    flex: 0 0 auto !important;
+    white-space: nowrap !important;
+    font-size: .78rem !important;
+    padding: 15px 0 12px !important;
+  }
+
+  .nav-links a::after {
+    bottom: 5px !important;
+  }
+
+  /* Give the fixed language dropdown enough room without being clipped. */
+  .language-picker {
+    position: static !important;
+  }
+
+  .language-menu {
+    max-width: calc(100vw - 24px) !important;
+  }
+
+  main section {
+    scroll-margin-top: 112px !important;
+  }
+}
+
+@media (max-width: 380px) {
+  nav.sticky > .nav-inner {
+    width: calc(100% - 16px) !important;
+    grid-template-columns: 34px minmax(0, 1fr) !important;
+    column-gap: 8px !important;
+  }
+
+  .nav-brand {
+    width: 34px !important;
+    height: 34px !important;
+  }
+
+  .nav-brand img {
+    width: 27px !important;
+    height: 27px !important;
+  }
+
+  .site-controls {
+    gap: 5px !important;
+  }
+
+  .language-control {
+    min-width: 98px !important;
+    padding-left: 9px !important;
+    padding-right: 9px !important;
+  }
+
+  .nav-links {
+    gap: 20px !important;
+  }
+}
