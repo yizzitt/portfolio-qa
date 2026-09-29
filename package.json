@@ -1,0 +1,29 @@
+{
+  "name": "portfolio-qa",
+  "version": "1.0.0",
+  "type": "commonjs",
+  "description": "QA Tester Portfolio - Freddy Ramírez Rede",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yizzitt/portfolio-qa.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/yizzitt/portfolio-qa/issues"
+  },
+  "homepage": "https://github.com/yizzitt/portfolio-qa#readme",
+  "devDependencies": {
+    "@tailwindcss/vite": "^4.3.3",
+    "tailwindcss": "^4.3.3",
+    "vite": "^8.3.1"
+  }
+}
